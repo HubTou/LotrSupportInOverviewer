@@ -24,6 +24,7 @@ Just to be on the safe side, a backup copy of your original Overviewer files wil
 
 After that, copy the overviewer_textures-1.7.10-with-lotr.jar at the place you put the standard Overviewer textures file and reference the new one in your existing configuration.
 For example, here's a simplified Overviewer configuration file doing that:
+
  	texturepath = "overviewer_textures-1.7.10-with-lotr.jar"
 	
  	worlds["world"] = "world/DIM100"
@@ -44,33 +45,42 @@ Ent jars and barrels sides are disjoint.
 Caveat
 ======
 The Overviewer software is currently server wide installed, but the modifications we make to it are specific to a peculiar Minecraft server instance because block items provided by mods have instance specific IDs...
+
 The glowing effect of Gulduril bricks is not represented.
+
 A barrel tap side is undistinguished from the other sides.
+
 There are no color differences between orc bombs strengths and their handles are not shown.
+
 We don't distinguish from the top, middle and bottom of pillar's sides.
+
 Mugs and plates are ugly.
+
 The top part of Flame of Harad and Hibiscus have the same data value than Yellow Iris, so they all have yellow tops.
+
 Clovers and tallGrass are not supported.
+
 Blocks without textures are missing (beacons, stalactite, flower pots, elven & morgul portals, unsmeltery, etc.)
 
 
 Versions and changelog
 ======================
- 1.09	2015-10-31	Added support for LOTR Utumno bricks (used for The Pits)
- 1.08	2015-10-24	Added support for LOTR mallornLadder, torches, orcTorches, beds, buttons, pressure plates, Utumno pillars, thatch floors, orcBombs
- 1.07	2015-10-21	Added support for LOTR walls (buggy), fences (buggy)
- 1.06	2015-10-18	Added support for LOTR pillars, single & double slabs, ovens, forges, hearth, Ungoliant's webs, ent jars (buggy), barrels (buggy), dwarven doors
- 1.05	2015-10-14	Added support for LOTR stairs (buggy), bars
- 1.04	2015-10-14	Corrected support for LOTR leaves, mordorGrass, aridGrass, quenditeGrass
+
+	1.09	2015-10-31	Added support for LOTR Utumno bricks (used for The Pits)
+	1.08	2015-10-24	Added support for LOTR mallornLadder, torches, orcTorches, beds, buttons, pressure plates, Utumno pillars, thatch floors, orcBombs
+	1.07	2015-10-21	Added support for LOTR walls (buggy), fences (buggy)
+	1.06	2015-10-18	Added support for LOTR pillars, single & double slabs, ovens, forges, hearth, Ungoliant's webs, ent jars (buggy), barrels (buggy), dwarven doors
+	1.05	2015-10-14	Added support for LOTR stairs (buggy), bars
+	1.04	2015-10-14	Corrected support for LOTR leaves, mordorGrass, aridGrass, quenditeGrass
  			Added support for LOTR corrupt mallorn sapling, flowers & plants
  			Buggy support for plantations, doubleFlowers
  			No support for tallGrass and clovers
- 1.03	2015-10-11	Added support for LOTR saplings, crafting tables
- 1.02	2015-10-08	Added support for LOTR woods, gulduril bricks (but without glow)
+	1.03	2015-10-11	Added support for LOTR saplings, crafting tables
+	1.02	2015-10-08	Added support for LOTR woods, gulduril bricks (but without glow)
  			Corrected an indentation bug
  			Added multiple block IDs substitutions on the same line
- 1.01	2015-10-07	Added support for LOTR rocks, leaves, planks, bricks, ore blocks
- 1.00	2015-09-27	Initial release
+	1.01	2015-10-07	Added support for LOTR rocks, leaves, planks, bricks, ore blocks
+	1.00	2015-09-27	Initial release
 
 
 License
