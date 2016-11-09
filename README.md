@@ -68,19 +68,19 @@ Versions and changelog
 
 	1.09	2015-10-31	Added support for LOTR Utumno bricks (used for The Pits)
 	1.08	2015-10-24	Added support for LOTR mallornLadder, torches, orcTorches, beds, buttons, pressure plates,
-					Utumno pillars, thatch floors, orcBombs
+						Utumno pillars, thatch floors, orcBombs
 	1.07	2015-10-21	Added support for LOTR walls (buggy), fences (buggy)
 	1.06	2015-10-18	Added support for LOTR pillars, single & double slabs, ovens, forges, hearth, Ungoliant's webs,
-					ent jars (buggy), barrels (buggy), dwarven doors
+						ent jars (buggy), barrels (buggy), dwarven doors
 	1.05	2015-10-14	Added support for LOTR stairs (buggy), bars
 	1.04	2015-10-14	Corrected support for LOTR leaves, mordorGrass, aridGrass, quenditeGrass
- 					Added support for LOTR corrupt mallorn sapling, flowers & plants
- 					Buggy support for plantations, doubleFlowers
- 					No support for tallGrass and clovers
+ 						Added support for LOTR corrupt mallorn sapling, flowers & plants
+ 						Buggy support for plantations, doubleFlowers
+ 						No support for tallGrass and clovers
 	1.03	2015-10-11	Added support for LOTR saplings, crafting tables
 	1.02	2015-10-08	Added support for LOTR woods, gulduril bricks (but without glow)
- 					Corrected an indentation bug
- 					Added multiple block IDs substitutions on the same line
+ 						Corrected an indentation bug
+ 						Added multiple block IDs substitutions on the same line
 	1.01	2015-10-07	Added support for LOTR rocks, leaves, planks, bricks, ore blocks
 	1.00	2015-09-27	Initial release
 
