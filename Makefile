@@ -1,8 +1,8 @@
-# @(#) LotrSupportInOverviewer:Makefile v1.09 (2015-10-31) / Hubert Tournier 
+# @(#) LotrSupportInOverviewer:Makefile v1.10 (2016-11-28) / Hubert Tournier 
 
-VERSION=1.09
-PY_VERSION=10
-LOTR_VERSION=24.4
+VERSION=1.10
+PY_VERSION=11
+LOTR_VERSION=30.3
 
 OVERVIEWER_TEXTURES_PY=/usr/local/lib/python2.7/site-packages/overviewer_core/textures.py
 
@@ -30,7 +30,7 @@ overviewer: overviewer_textures-1.7.10.jar
 	@cd OUTPUT_DIR ; \
 	tar xf ../overviewer_textures-1.7.10.jar ; \
 	rm -r *.class META-INF log4j2.xml net pack.png assets/minecraft/font assets/minecraft/lang assets/minecraft/shaders assets/minecraft/texts
-	@echo "Extracted assets from overviewer_textures-1.7.10-with-lotr.jar"
+	@echo "Extracted assets from overviewer_textures-1.7.10.jar"
  
 overviewer_textures-1.7.10.jar:
 	@${HTTP_CLIENT} ${HTTP_CLIENT_ARGS} https://s3.amazonaws.com/Minecraft.Download/versions/1.7.10/1.7.10.jar

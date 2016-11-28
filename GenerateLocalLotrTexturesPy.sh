@@ -1,5 +1,5 @@
 #!/bin/sh
-# @(#) LotrSupportInOverviewer:GenerateLocalLotrTexturesPy.sh v1.01 (2015-10-08) / Hubert Tournier 
+# @(#) LotrSupportInOverviewer:GenerateLocalLotrTexturesPy.sh v1.02 (2016-11-28) / Hubert Tournier 
 
 main( )
 {
@@ -25,11 +25,11 @@ main( )
 		BEGIN				{
 							FS=";"
 						}
-		/^[0-9]*;01;lotr:tile.lotr:.*/	{
+		/^[0-9]*;01;lotr:tile.*/	{
 							BlockId[$3] = $1
 							next
 						}
-		/<lotr:tile.lotr:.*>/		{
+		/<lotr:tile\..*>/		{
 							while (match($0, /<lotr[^>]*>/))
 							{
 								K = substr($0, RSTART + 1, RLENGTH - 2)

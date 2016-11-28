@@ -54,6 +54,7 @@ Blocks without textures are missing (beacons, stalactite, flower pots, elven & m
 
 Versions and changelog
 ======================
+1.10	2016-11-28	Started support for LOTR Mod B30.3
 1.09	2015-10-31	Added support for LOTR Utumno bricks (used for The Pits)
 1.08	2015-10-24	Added support for LOTR mallornLadder, torches, orcTorches, beds, buttons, pressure plates, Utumno pillars, thatch floors, orcBombs
 1.07	2015-10-21	Added support for LOTR walls (buggy), fences (buggy)
@@ -91,4 +92,4 @@ Cf. http://lotrminecraftmod.wikia.com/wiki/The_Lord_of_the_Rings_Minecraft_Mod_W
 Author
 ======
 Hubert Tournier
-October, 31 2015
+November, 28 2015

@@ -1,37 +1,37 @@
-# { LotrSupportInOverviewer 10
-# @(#) LotrSupportInOverviewer:lotr_textures.py v1.09 (2015-10-31) / Hubert Tournier
+# { LotrSupportInOverviewer 11
+# @(#) LotrSupportInOverviewer:lotr_textures.py v1.10 (2016-11-28) / Hubert Tournier
 
 ################################################################################
 # Opaque single-texture full blocks without data value: ########################
 ################################################################################
 
-block(blockid=<lotr:tile.lotr:oreCopper>, top_image="assets/lotr/textures/blocks/oreCopper.png")
-block(blockid=<lotr:tile.lotr:oreTin>, top_image="assets/lotr/textures/blocks/oreTin.png")
-block(blockid=<lotr:tile.lotr:oreSilver>, top_image="assets/lotr/textures/blocks/oreSilver.png")
-block(blockid=<lotr:tile.lotr:oreMithril>, top_image="assets/lotr/textures/blocks/oreMithril.png")
-block(blockid=<lotr:tile.lotr:oreNaurite>, top_image="assets/lotr/textures/blocks/oreNaurite.png")
-block(blockid=<lotr:tile.lotr:oreQuendite>, top_image="assets/lotr/textures/blocks/oreQuendite.png")
-block(blockid=<lotr:tile.lotr:oreGlowstone>, top_image="assets/lotr/textures/blocks/oreGlowstone.png")
-block(blockid=<lotr:tile.lotr:remains>, top_image="assets/lotr/textures/blocks/remains.png")
-block(blockid=<lotr:tile.lotr:oreSulfur>, top_image="assets/lotr/textures/blocks/oreSulfur.png")
-block(blockid=<lotr:tile.lotr:oreSaltpeter>, top_image="assets/lotr/textures/blocks/oreSaltpeter.png")
-block(blockid=<lotr:tile.lotr:quagmire>, top_image="assets/lotr/textures/blocks/quagmire.png")
-block(blockid=<lotr:tile.lotr:goran>, top_image="assets/lotr/textures/blocks/goran.png")
-block(blockid=<lotr:tile.lotr:thatch>, top_image="assets/lotr/textures/blocks/thatch.png")
-block(blockid=<lotr:tile.lotr:termiteMound>, top_image="assets/lotr/textures/blocks/termiteMound.png")
-block(blockid=<lotr:tile.lotr:mordorDirt>, top_image="assets/lotr/textures/blocks/mordorDirt.png")
-block(blockid=<lotr:tile.lotr:mordorGravel>, top_image="assets/lotr/textures/blocks/mordorGravel.png")
-block(blockid=<lotr:tile.lotr:dwarvenDoor>, top_image="assets/minecraft/textures/blocks/stone.png")
+block(blockid=<lotr:tile.oreCopper>, top_image="assets/lotr/textures/blocks/oreCopper.png")
+block(blockid=<lotr:tile.oreTin>, top_image="assets/lotr/textures/blocks/oreTin.png")
+block(blockid=<lotr:tile.oreSilver>, top_image="assets/lotr/textures/blocks/oreSilver.png")
+block(blockid=<lotr:tile.oreMithril>, top_image="assets/lotr/textures/blocks/oreMithril.png")
+block(blockid=<lotr:tile.oreNaurite>, top_image="assets/lotr/textures/blocks/oreNaurite.png")
+block(blockid=<lotr:tile.oreQuendite>, top_image="assets/lotr/textures/blocks/oreQuendite.png")
+block(blockid=<lotr:tile.oreGlowstone>, top_image="assets/lotr/textures/blocks/oreGlowstone.png")
+block(blockid=<lotr:tile.remains>, top_image="assets/lotr/textures/blocks/remains.png")
+block(blockid=<lotr:tile.oreSulfur>, top_image="assets/lotr/textures/blocks/oreSulfur.png")
+block(blockid=<lotr:tile.oreSaltpeter>, top_image="assets/lotr/textures/blocks/oreSaltpeter.png")
+block(blockid=<lotr:tile.quagmire>, top_image="assets/lotr/textures/blocks/quagmire.png")
+block(blockid=<lotr:tile.goran>, top_image="assets/lotr/textures/blocks/goran.png")
+block(blockid=<lotr:tile.thatch>, top_image="assets/lotr/textures/blocks/thatch.png")
+block(blockid=<lotr:tile.termiteMound>, top_image="assets/lotr/textures/blocks/termiteMound.png")
+block(blockid=<lotr:tile.mordorDirt>, top_image="assets/lotr/textures/blocks/mordorDirt.png")
+block(blockid=<lotr:tile.mordorGravel>, top_image="assets/lotr/textures/blocks/mordorGravel.png")
+block(blockid=<lotr:tile.dwarvenDoor>, top_image="assets/minecraft/textures/blocks/stone.png")
 
 ################################################################################
 # Opaque single-texture full blocks with data value: ###########################
 ################################################################################
 
-@material(blockid=<lotr:tile.lotr:rock>, data=range(5), solid=True)
+@material(blockid=<lotr:tile.rock>, data=range(5), solid=True)
 def rock_values(self, blockid, data):
-    if data == 0:  # Mordor Rock
-        t =  self.load_image_texture("assets/lotr/textures/blocks/rock_mordor.png")
-    elif data == 1:  # Gondor Rock
+    # Mordor Rock
+    t =  self.load_image_texture("assets/lotr/textures/blocks/rock_mordor.png")
+    if data == 1:  # Gondor Rock
         t =  self.load_image_texture("assets/lotr/textures/blocks/rock_gondor.png")
     elif data == 2:  # Rohan Rock
         t =  self.load_image_texture("assets/lotr/textures/blocks/rock_rohan.png")
@@ -41,27 +41,27 @@ def rock_values(self, blockid, data):
         t =  self.load_image_texture("assets/lotr/textures/blocks/rock_red.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:oreMorgulIron>, data=range(2), solid=True)
+@material(blockid=<lotr:tile.oreMorgulIron>, data=range(2), solid=True)
 def oreMorgulIron_values(self, blockid, data):
-    if data == 0:  # Morgul Iron Ore
-        t =  self.load_image_texture("assets/lotr/textures/blocks/oreMorgulIron.png")
-    elif data == 1:  # Morgul Iron Ore (Mordor) 
+    # Morgul Iron Ore
+    t =  self.load_image_texture("assets/lotr/textures/blocks/oreMorgulIron.png")
+    if data == 1:  # Morgul Iron Ore (Mordor) 
         t =  self.load_image_texture("assets/lotr/textures/blocks/oreMorgulIron_mordor.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:oreGulduril>, data=range(2), solid=True)
+@material(blockid=<lotr:tile.oreGulduril>, data=range(2), solid=True)
 def oreGulduril_values(self, blockid, data):
-    if data == 0:  # Gulduril Ore
-        t =  self.load_image_texture("assets/lotr/textures/blocks/oreGulduril.png")
-    elif data == 1:  # Gulduril Ore (Mordor)
+    # Gulduril Ore
+    t =  self.load_image_texture("assets/lotr/textures/blocks/oreGulduril.png")
+    if data == 1:  # Gulduril Ore (Mordor)
         t =  self.load_image_texture("assets/lotr/textures/blocks/oreGulduril_mordor.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:oreStorage>, data=range(16), solid=True)
+@material(blockid=<lotr:tile.oreStorage>, data=range(16), solid=True)
 def oreStorage_values(self, blockid, data):
-    if data == 0:  # Block of Copper
-        img =  self.build_block(self.load_image_texture("assets/lotr/textures/blocks/oreStorage_copper.png"), self.load_image_texture("assets/lotr/textures/blocks/oreStorage_copper.png"))
-    elif data == 1:  # Block of Tin
+    # Block of Copper
+    img =  self.build_block(self.load_image_texture("assets/lotr/textures/blocks/oreStorage_copper.png"), self.load_image_texture("assets/lotr/textures/blocks/oreStorage_copper.png"))
+    if data == 1:  # Block of Tin
         img =  self.build_block(self.load_image_texture("assets/lotr/textures/blocks/oreStorage_tin.png"), self.load_image_texture("assets/lotr/textures/blocks/oreStorage_tin.png"))
     elif data == 2:  # Block of Bronze
         img =  self.build_block(self.load_image_texture("assets/lotr/textures/blocks/oreStorage_bronze.png"), self.load_image_texture("assets/lotr/textures/blocks/oreStorage_bronze.png"))
@@ -93,20 +93,20 @@ def oreStorage_values(self, blockid, data):
         img =  self.build_block(self.load_image_texture("assets/lotr/textures/blocks/oreStorage_blueDwarfSteel.png"), self.load_image_texture("assets/lotr/textures/blocks/oreStorage_blueDwarfSteel.png"))
     return img
 
-@material(blockid=<lotr:tile.lotr:oreStorage2>, data=range(2), solid=True)
+@material(blockid=<lotr:tile.oreStorage2>, data=range(2), solid=True)
 def oreStorage2_values(self, blockid, data):
-    if data == 0:  # Block of Black Uruk Steel
-        t = self.load_image_texture("assets/lotr/textures/blocks/oreStorage2_blackUrukSteel.png")
-    elif data == 1:  # Block of Elven Steel 
+    # Block of Black Uruk Steel
+    t = self.load_image_texture("assets/lotr/textures/blocks/oreStorage2_blackUrukSteel.png")
+    if data == 1:  # Block of Elven Steel 
         t = self.load_image_texture("assets/lotr/textures/blocks/oreStorage2_elfSteel.png")
     return self.build_block(t, t)
 
 ##### Caveat: The glowing effect of Gulduril bricks is not represented #####
-@material(blockid=<lotr:tile.lotr:guldurilBrick>, data=range(6), solid=True)
+@material(blockid=<lotr:tile.guldurilBrick>, data=range(6), solid=True)
 def guldurilBrick_values(self, blockid, data):
-    if data == 0:  # Gulduril Mordor Brick
-        t = self.load_image_texture("assets/lotr/textures/blocks/brick_mordor.png")
-    elif data == 1:  # Gulduril Cracked Mordor Brick
+    # Gulduril Mordor Brick
+    t = self.load_image_texture("assets/lotr/textures/blocks/brick_mordor.png")
+    if data == 1:  # Gulduril Cracked Mordor Brick
         t = self.load_image_texture("assets/lotr/textures/blocks/brick_mordorCracked.png")
     elif data == 2:  # Gulduril Angmar Brick
         t = self.load_image_texture("assets/lotr/textures/blocks/brick2_angmar.png")
@@ -118,13 +118,13 @@ def guldurilBrick_values(self, blockid, data):
         t = self.load_image_texture("assets/lotr/textures/blocks/brick2_dolGuldurCracked.png")
     return self.build_block(t, t)
 
-@material(blockid=[<lotr:tile.lotr:leaves>, <lotr:tile.lotr:leaves2>, <lotr:tile.lotr:leaves3>, <lotr:tile.lotr:leaves4>, <lotr:tile.lotr:leaves5>, <lotr:tile.lotr:fruitLeaves>], data=range(16), transparent=True, solid=True)
+@material(blockid=[<lotr:tile.leaves>, <lotr:tile.leaves2>, <lotr:tile.leaves3>, <lotr:tile.leaves4>, <lotr:tile.leaves5>, <lotr:tile.fruitLeaves>], data=range(16), transparent=True, solid=True)
 def lotr_leaves(self, blockid, data):
     # mask out the bits 4 and 8
     # they are used for player placed and check-for-decay blocks
     data = data & 0x7
     t = self.load_image_texture("assets/minecraft/textures/blocks/leaves_oak.png")
-    if blockid == <lotr:tile.lotr:leaves>:
+    if blockid == <lotr:tile.leaves>:
         if data == 0 or data == 4:  # Shire Pine Leaves
             t =  self.load_image_texture("assets/lotr/textures/blocks/leaves_shirePine_fancy.png")
         elif data == 1 or data == 5:  # Mallorn Leaves
@@ -133,7 +133,7 @@ def lotr_leaves(self, blockid, data):
             t =  self.load_image_texture("assets/lotr/textures/blocks/leaves_mirkOak_fancy.png")
         elif data == 3 or data == 7:  # Red Mirk-oak Leaves
             t =  self.load_image_texture("assets/lotr/textures/blocks/leaves_mirkOakRed_fancy.png")
-    elif blockid == <lotr:tile.lotr:leaves2>:
+    elif blockid == <lotr:tile.leaves2>:
         if data == 0 or data == 4:  # Lebethron Leaves
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves2_lebethron_fancy.png")
         elif data == 1 or data == 5:  # Beech Leaves
@@ -142,7 +142,7 @@ def lotr_leaves(self, blockid, data):
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves2_holly_fancy.png")
         elif data == 3 or data == 7:  # Banana Leaves 
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves2_banana_fancy.png")
-    elif blockid == <lotr:tile.lotr:leaves3>:
+    elif blockid == <lotr:tile.leaves3>:
         if data == 0 or data == 4:  # Maple Leaves
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves3_maple_fancy.png")
         elif data == 1 or data == 5:  # Larch Leaves
@@ -151,7 +151,7 @@ def lotr_leaves(self, blockid, data):
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves3_datePalm_fancy.png")
         elif data == 3 or data == 7:  # Mangrove Leaves 
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves3_mangrove_fancy.png")
-    elif blockid == <lotr:tile.lotr:leaves4>:
+    elif blockid == <lotr:tile.leaves4>:
         if data == 0 or data == 4:  # Chestnut Leaves
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves4_chestnut_fancy.png")
         elif data == 1 or data == 5:  # Baobab Leaves
@@ -160,10 +160,10 @@ def lotr_leaves(self, blockid, data):
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves4_cedar_fancy.png")
         elif data == 3 or data == 7:  # Fir Leaves 
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves4_fir_fancy.png")
-    elif blockid == <lotr:tile.lotr:leaves5>:
+    elif blockid == <lotr:tile.leaves5>:
         if data == 0 or data == 4:  # Pine Leaves 
             t = self.load_image_texture("assets/lotr/textures/blocks/leaves5_pine_fancy.png")
-    elif blockid == <lotr:tile.lotr:fruitLeaves>:
+    elif blockid == <lotr:tile.fruitLeaves>:
         if data == 0 or data == 4:  # Apple Leaves
             t = self.load_image_texture("assets/lotr/textures/blocks/fruitLeaves_apple_fancy.png")
         elif data == 1 or data == 5:  # Pear Leaves
@@ -174,11 +174,11 @@ def lotr_leaves(self, blockid, data):
             t = self.load_image_texture("assets/lotr/textures/blocks/fruitLeaves_mango_fancy.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:planks>, data=range(16), solid=True)
+@material(blockid=<lotr:tile.planks>, data=range(16), solid=True)
 def planks_values(self, blockid, data):
-    if data == 0:  # Shire Pine Wood Planks
-        t =  self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png")
-    elif data == 1:  # Mallorn Wood Planks
+    # Shire Pine Wood Planks
+    t =  self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png")
+    if data == 1:  # Mallorn Wood Planks
         t =  self.load_image_texture("assets/lotr/textures/blocks/planks_mallorn.png")
     elif data == 2:  # Mirk-oak Wood Planks
         t =  self.load_image_texture("assets/lotr/textures/blocks/planks_mirkOak.png")
@@ -210,11 +210,11 @@ def planks_values(self, blockid, data):
         t =  self.load_image_texture("assets/lotr/textures/blocks/planks_mangrove.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:planks2>, data=range(5), solid=True)
+@material(blockid=<lotr:tile.planks2>, data=range(5), solid=True)
 def planks2_values(self, blockid, data):
-    if data == 0:  # Chestnut Wood Planks
-        t =  self.load_image_texture("assets/lotr/textures/blocks/planks2_chestnut.png")
-    elif data == 1:  # Baobab Wood Planks
+    # Chestnut Wood Planks
+    t =  self.load_image_texture("assets/lotr/textures/blocks/planks2_chestnut.png")
+    if data == 1:  # Baobab Wood Planks
         t =  self.load_image_texture("assets/lotr/textures/blocks/planks2_baobab.png")
     elif data == 2:  # Cedar Wood Planks
         t =  self.load_image_texture("assets/lotr/textures/blocks/planks2_cedar.png")
@@ -224,11 +224,11 @@ def planks2_values(self, blockid, data):
         t =  self.load_image_texture("assets/lotr/textures/blocks/planks2_pine.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:brick>, data=range(16), solid=True)
+@material(blockid=<lotr:tile.brick>, data=range(16), solid=True)
 def brick_values(self, blockid, data):
-    if data == 0:  # Mordor Brick
-        t = self.load_image_texture("assets/lotr/textures/blocks/brick_mordor.png")
-    elif data == 1:  # Gondor Brick
+    # Mordor Brick
+    t = self.load_image_texture("assets/lotr/textures/blocks/brick_mordor.png")
+    if data == 1:  # Gondor Brick
         t = self.load_image_texture("assets/lotr/textures/blocks/brick_gondor.png")
     elif data == 2:  # Mossy Gondor Brick
         t = self.load_image_texture("assets/lotr/textures/blocks/brick_gondorMossy.png")
@@ -260,11 +260,11 @@ def brick_values(self, blockid, data):
         t = self.load_image_texture("assets/lotr/textures/blocks/brick_nearHarad.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:brick2>, data=range(16), solid=True)
+@material(blockid=<lotr:tile.brick2>, data=range(16), solid=True)
 def brick2_values(self, blockid, data):
-    if data == 0:  # Angmar Brick
-        t = self.load_image_texture("assets/lotr/textures/blocks/brick2_angmar.png")
-    elif data == 1:  # Cracked Angmar Brick
+    # Angmar Brick
+    t = self.load_image_texture("assets/lotr/textures/blocks/brick2_angmar.png")
+    if data == 1:  # Cracked Angmar Brick
         t = self.load_image_texture("assets/lotr/textures/blocks/brick2_angmarCracked.png")
     elif data == 2:  # Sarncaran Brick
         t = self.load_image_texture("assets/lotr/textures/blocks/brick2_redRock.png")
@@ -296,11 +296,11 @@ def brick2_values(self, blockid, data):
         t = self.load_image_texture("assets/lotr/textures/blocks/brick2_galadhrimCarved.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:brick3>, data=range(13), solid=True)
+@material(blockid=<lotr:tile.brick3>, data=range(13), solid=True)
 def brick3_values(self, blockid, data):
-    if data == 0:  # Carved Sarlluin Brick
-        t = self.load_image_texture("assets/lotr/textures/blocks/brick3_blueCarved.png")
-    elif data == 1:  # Carved Sarncaran Brick
+    # Carved Sarlluin Brick
+    t = self.load_image_texture("assets/lotr/textures/blocks/brick3_blueCarved.png")
+    if data == 1:  # Carved Sarncaran Brick
         t = self.load_image_texture("assets/lotr/textures/blocks/brick3_redCarved.png")
     elif data == 2:  # High Elven Brick
         t = self.load_image_texture("assets/lotr/textures/blocks/brick3_highElven.png")
@@ -326,11 +326,10 @@ def brick3_values(self, blockid, data):
         t = self.load_image_texture("assets/lotr/textures/blocks/brick3_dwarvenGlowing.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.lotr:utumnoBrick>, data=range(6), solid=True)
+@material(blockid=<lotr:tile.utumnoBrick>, data=range(6), solid=True)
 def utumnoBrick_values(self, blockid, data):
-    if data == 0:
-        t =  self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_fire.png")
-    elif data == 1:
+    t =  self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_fire.png")
+    if data == 1:
         t =  self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_burning.png")
     elif data == 2:
         t =  self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_ice.png")
@@ -338,7 +337,7 @@ def utumnoBrick_values(self, blockid, data):
         t =  self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_iceGlowing.png")
     elif data == 4:
         t =  self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_obsidian.png")
-    elif data == 4:
+    elif data == 5:
         t =  self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_obsidianFire.png")
     return self.build_block(t, t)
 
@@ -346,97 +345,97 @@ def utumnoBrick_values(self, blockid, data):
 # Opaque bi-texture full blocks: ###############################################
 ################################################################################
 
-@material(blockid=<lotr:tile.lotr:angmarCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.angmarCraftingTable>, data=range(1), solid=True)
 def angmarCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/angmarCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/angmarCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:blueDwarvenCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.blueDwarvenCraftingTable>, data=range(1), solid=True)
 def blueDwarvenCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/blueDwarvenCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/blueDwarvenCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:dolAmrothCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.dolAmrothCraftingTable>, data=range(1), solid=True)
 def dolAmrothCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/dolAmrothCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/dolAmrothCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:dolGuldurCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.dolGuldurCraftingTable>, data=range(1), solid=True)
 def dolGuldurCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/dolGuldurCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/dolGuldurCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:dunlendingCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.dunlendingCraftingTable>, data=range(1), solid=True)
 def dunlendingCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/dunlendingCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/dunlendingCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:dwarvenCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.dwarvenCraftingTable>, data=range(1), solid=True)
 def dwarvenCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/dwarvenCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/dwarvenCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:elvenCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.elvenCraftingTable>, data=range(1), solid=True)
 def elvenCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/elvenCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/elvenCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:gondorianCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.gondorianCraftingTable>, data=range(1), solid=True)
 def gondorianCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/gondorianCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/gondorianCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:gundabadCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.gundabadCraftingTable>, data=range(1), solid=True)
 def gundabadCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/gundabadCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/gundabadCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:halfTrollCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.halfTrollCraftingTable>, data=range(1), solid=True)
 def halfTrollCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/halfTrollCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/halfTrollCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:highElvenCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.highElvenCraftingTable>, data=range(1), solid=True)
 def highElvenCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/highElvenCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/highElvenCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:moredainCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.moredainCraftingTable>, data=range(1), solid=True)
 def moredainCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/moredainCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/moredainCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:morgulCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.morgulCraftingTable>, data=range(1), solid=True)
 def morgulCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/morgulCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/morgulCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:nearHaradCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.nearHaradCraftingTable>, data=range(1), solid=True)
 def nearHaradCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/nearHaradCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/nearHaradCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:rangerCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.rangerCraftingTable>, data=range(1), solid=True)
 def rangerCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/rangerCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/rangerCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:rohirricCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.rohirricCraftingTable>, data=range(1), solid=True)
 def rohirricCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/rohirricCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/rohirricCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:urukCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.urukCraftingTable>, data=range(1), solid=True)
 def urukCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/urukCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/urukCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:woodElvenCraftingTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.woodElvenCraftingTable>, data=range(1), solid=True)
 def woodElvenCraftingTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/woodElvenCraftingTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/woodElvenCraftingTable_side.png"))
 
-@material(blockid=<lotr:tile.lotr:quenditeGrass>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.quenditeGrass>, data=range(1), solid=True)
 def quenditeGrass(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/quenditeGrass_top.png"), self.load_image_texture("assets/lotr/textures/blocks/quenditeGrass_side.png"))
 
-@material(blockid=<lotr:tile.lotr:hearth>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.hearth>, data=range(1), solid=True)
 def hearth(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/hearth_top.png"), self.load_image_texture("assets/lotr/textures/blocks/hearth_side.png"))
 
 ##### Caveat: the tap side is undistinguished from the other sides #####
-@material(blockid=<lotr:tile.lotr:barrel>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.barrel>, data=range(1), solid=True)
 def barrel(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/barrel_top.png"), self.load_image_texture("assets/lotr/textures/blocks/barrel_side.png"))
 
-@material(blockid=<lotr:tile.lotr:entJar>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.entJar>, data=range(1), solid=True)
 def entJar(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/entJar_top.png"), self.load_image_texture("assets/lotr/textures/blocks/entJar_side.png"))
 
 ##### Caveat: no color differences between bomb strengths and handles are not shown #####
-@material(blockid=<lotr:tile.lotr:orcBomb>, data=range(16), solid=True)
+@material(blockid=<lotr:tile.orcBomb>, data=range(16), solid=True)
 def orcBomb(self, blockid, data):
     if data == 0 or data == 1 or data == 2:
         return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/orcBomb_top.png"), self.load_image_texture("assets/lotr/textures/blocks/orcBomb_side.png"))
@@ -447,7 +446,7 @@ def orcBomb(self, blockid, data):
 # Opaque bi-texture full blocks with orientation: ##############################
 ################################################################################
 
-@material(blockid=[<lotr:tile.lotr:wood>,<lotr:tile.lotr:wood2>,<lotr:tile.lotr:wood3>,<lotr:tile.lotr:wood4>,<lotr:tile.lotr:wood5>,<lotr:tile.lotr:fruitWood>,<lotr:tile.lotr:rottenLog>], data=range(16), solid=True)
+@material(blockid=[<lotr:tile.wood>,<lotr:tile.wood2>,<lotr:tile.wood3>,<lotr:tile.wood4>,<lotr:tile.wood5>,<lotr:tile.fruitWood>,<lotr:tile.rottenLog>], data=range(16), solid=True)
 def lotr_wood(self, blockid, data):
     # extract orientation and wood type from data bits
     wood_type = data & 3
@@ -461,7 +460,7 @@ def lotr_wood(self, blockid, data):
     # choose textures
     top = self.load_image_texture("assets/minecraft/textures/blocks/log_oak_top.png")
     side = self.load_image_texture("assets/minecraft/textures/blocks/log_oak.png")
-    if blockid == <lotr:tile.lotr:wood>:
+    if blockid == <lotr:tile.wood>:
         if wood_type == 0: # Shire Pine Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood_shirePine_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood_shirePine_side.png")
@@ -474,7 +473,7 @@ def lotr_wood(self, blockid, data):
         elif wood_type == 3: # Charred Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood_charred_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood_charred_side.png")
-    elif blockid == <lotr:tile.lotr:wood2>:
+    elif blockid == <lotr:tile.wood2>:
         if wood_type == 0: # Lebethron Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood2_lebethron_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood2_lebethron_side.png")
@@ -487,7 +486,7 @@ def lotr_wood(self, blockid, data):
         elif wood_type == 3: # Banana Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood2_banana_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood2_banana_side.png")
-    elif blockid == <lotr:tile.lotr:wood3>:
+    elif blockid == <lotr:tile.wood3>:
         if wood_type == 0: # Maple Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood3_maple_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood3_maple_side.png")
@@ -500,7 +499,7 @@ def lotr_wood(self, blockid, data):
         elif wood_type == 3: # Mangrove Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood3_mangrove_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood3_mangrove_side.png")
-    elif blockid == <lotr:tile.lotr:wood4>:
+    elif blockid == <lotr:tile.wood4>:
         if wood_type == 0: # Chestnut Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood4_chestnut_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood4_chestnut_side.png")
@@ -513,11 +512,11 @@ def lotr_wood(self, blockid, data):
         elif wood_type == 3: # Fir Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood4_fir_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood4_fir_side.png")
-    elif blockid == <lotr:tile.lotr:wood5>:
+    elif blockid == <lotr:tile.wood5>:
         if wood_type == 0: # Pine Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/wood5_pine_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/wood5_pine_side.png")
-    elif blockid == <lotr:tile.lotr:fruitWood>:
+    elif blockid == <lotr:tile.fruitWood>:
         if wood_type == 0: # Apple Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/fruitWood_apple_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/fruitWood_apple_side.png")
@@ -530,7 +529,7 @@ def lotr_wood(self, blockid, data):
         elif wood_type == 3: # Mango Wood
             top = self.load_image_texture("assets/lotr/textures/blocks/fruitWood_mango_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/fruitWood_mango_side.png")
-    elif blockid == <lotr:tile.lotr:rottenLog>:
+    elif blockid == <lotr:tile.rottenLog>:
         if wood_type == 0: # 
             top = self.load_image_texture("assets/lotr/textures/blocks/rottenLog_rotten_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/rottenLog_rotten_side.png")
@@ -543,11 +542,11 @@ def lotr_wood(self, blockid, data):
         return self.build_full_block(side, None, None, side.rotate(270), top)
 
 ##### Caveat: we don't distinguish from the top, middle and bottom of pillar's sides #####
-@material(blockid=[<lotr:tile.lotr:pillar>, <lotr:tile.lotr:utumnoPillar>], data=range(14), solid=True)
+@material(blockid=[<lotr:tile.pillar>, <lotr:tile.utumnoPillar>], data=range(14), solid=True)
 def lotr_pillars(self, blockid, data):
     top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_dwarven_face.png")
     side = self.load_image_texture("assets/lotr/textures/blocks/pillar_dwarven_side.png")
-    if blockid == <lotr:tile.lotr:pillar>:
+    if blockid == <lotr:tile.pillar>:
         if data == 1:
             top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_galadhrim_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_galadhrim_side.png")
@@ -587,7 +586,7 @@ def lotr_pillars(self, blockid, data):
         elif data == 13:
             top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_woodElvenCracked_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_woodElvenCracked_side.png")
-    elif blockid == <lotr:tile.lotr:utumnoPillar>:
+    elif blockid == <lotr:tile.utumnoPillar>:
         if data == 0:
             top  = self.load_image_texture("assets/lotr/textures/blocks/utumnoPillar_fire_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/utumnoPillar_fire_side.png")
@@ -603,7 +602,7 @@ def lotr_pillars(self, blockid, data):
 # Opaque tri-texture full blocks with orientation: #############################
 ################################################################################
 
-@material(blockid=[<lotr:tile.lotr:hobbitOven>, <lotr:tile.lotr:dwarvenForge>, <lotr:tile.lotr:elvenForge>, <lotr:tile.lotr:orcForge>], data=range(6), solid=True)
+@material(blockid=[<lotr:tile.hobbitOven>, <lotr:tile.dwarvenForge>, <lotr:tile.elvenForge>, <lotr:tile.orcForge>], data=range(6), solid=True)
 def threeSidesOpaqueItems(self, blockid, data):
     # first, do the rotation if needed
     if self.rotation == 1:
@@ -621,19 +620,19 @@ def threeSidesOpaqueItems(self, blockid, data):
         elif data == 3: data = 5
         elif data == 4: data = 3
         elif data == 5: data = 2
-    if blockid == <lotr:tile.lotr:hobbitOven>:
+    if blockid == <lotr:tile.hobbitOven>:
         top   = self.load_image_texture("assets/lotr/textures/blocks/hobbitOven_top.png")
         side  = self.load_image_texture("assets/lotr/textures/blocks/hobbitOven_side.png")
         front = self.load_image_texture("assets/lotr/textures/blocks/hobbitOven_front.png")
-    elif blockid == <lotr:tile.lotr:dwarvenForge>:
+    elif blockid == <lotr:tile.dwarvenForge>:
         top   = self.load_image_texture("assets/lotr/textures/blocks/dwarvenForge_top.png")
         side  = self.load_image_texture("assets/lotr/textures/blocks/dwarvenForge_side.png")
         front = self.load_image_texture("assets/lotr/textures/blocks/dwarvenForge_front.png")
-    elif blockid == <lotr:tile.lotr:elvenForge>:
+    elif blockid == <lotr:tile.elvenForge>:
         top   = self.load_image_texture("assets/lotr/textures/blocks/elvenForge_top.png")
         side  = self.load_image_texture("assets/lotr/textures/blocks/elvenForge_side.png")
         front = self.load_image_texture("assets/lotr/textures/blocks/elvenForge_front.png")
-    elif blockid == <lotr:tile.lotr:orcForge>:
+    elif blockid == <lotr:tile.orcForge>:
         top   = self.load_image_texture("assets/lotr/textures/blocks/orcForge_top.png")
         side  = self.load_image_texture("assets/lotr/textures/blocks/orcForge_side.png")
         front = self.load_image_texture("assets/lotr/textures/blocks/orcForge_front.png")
@@ -648,7 +647,7 @@ def threeSidesOpaqueItems(self, blockid, data):
 # Transparent single-texture full blocks with data value: ######################
 ################################################################################
 
-@material(blockid=<lotr:tile.lotr:berryBush>, data=range(16), solid=True, transparent=True)
+@material(blockid=<lotr:tile.berryBush>, data=range(16), solid=True, transparent=True)
 def berryBush(self, blockid, data):
     t = self.load_image_texture("assets/lotr/textures/blocks/berryBush_blueberry_bare.png")
     if data == 0:     # Blueberry Bush Bare
@@ -677,11 +676,11 @@ def berryBush(self, blockid, data):
 # Transparent single texture sprites: ##########################################
 ################################################################################
 
-@material(blockid=[<lotr:tile.lotr:sapling>,<lotr:tile.lotr:sapling2>,<lotr:tile.lotr:sapling3>,<lotr:tile.lotr:sapling4>,<lotr:tile.lotr:sapling5>,<lotr:tile.lotr:fruitSapling>,<lotr:tile.lotr:corruptMallorn>], data=range(16), transparent=True)
+@material(blockid=[<lotr:tile.sapling>,<lotr:tile.sapling2>,<lotr:tile.sapling3>,<lotr:tile.sapling4>,<lotr:tile.sapling5>,<lotr:tile.fruitSapling>,<lotr:tile.corruptMallorn>], data=range(16), transparent=True)
 def lotr_saplings(self, blockid, data):
     # default sapling
     tex = self.load_image_texture("assets/minecraft/textures/blocks/sapling_oak.png")
-    if blockid == <lotr:tile.lotr:sapling>:
+    if blockid == <lotr:tile.sapling>:
         if data & 0x3 == 0: # Shire Pine Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling_shirePine.png")
         elif data & 0x3 == 1: # Mallorn Sapling
@@ -690,7 +689,7 @@ def lotr_saplings(self, blockid, data):
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling_mirkOak.png")
         elif data & 0x3 == 3: # Red Mirk-oak Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling_mirkOakRed.png")
-    elif blockid == <lotr:tile.lotr:sapling2>:
+    elif blockid == <lotr:tile.sapling2>:
         if data & 0x3 == 0: # Lebethron Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling2_lebethron.png")
         elif data & 0x3 == 1: # Beech Sapling
@@ -699,7 +698,7 @@ def lotr_saplings(self, blockid, data):
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling2_holly.png")
         elif data & 0x3 == 3: # Banana Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling2_banana.png")
-    elif blockid == <lotr:tile.lotr:sapling3>:
+    elif blockid == <lotr:tile.sapling3>:
         if data & 0x3 == 0: # Maple Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling3_maple.png")
         elif data & 0x3 == 1: # Larch Sapling
@@ -708,7 +707,7 @@ def lotr_saplings(self, blockid, data):
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling3_datePalm.png")
         elif data & 0x3 == 3: # Mangrove Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling3_mangrove.png")
-    elif blockid == <lotr:tile.lotr:sapling4>:
+    elif blockid == <lotr:tile.sapling4>:
         if data & 0x3 == 0: # Chestnut Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling4_chestnut.png")
         elif data & 0x3 == 1: # Baobab Sapling
@@ -717,10 +716,10 @@ def lotr_saplings(self, blockid, data):
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling4_cedar.png")
         elif data & 0x3 == 3: # Fir Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling4_fir.png")
-    elif blockid == <lotr:tile.lotr:sapling5>:
+    elif blockid == <lotr:tile.sapling5>:
         if data & 0x3 == 0: # Pine Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/sapling5_pine.png")
-    elif blockid == <lotr:tile.lotr:fruitSapling>:
+    elif blockid == <lotr:tile.fruitSapling>:
         if data & 0x3 == 0: # Apple Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/fruitSapling_apple.png")
         elif data & 0x3 == 1: # Pear Sapling
@@ -729,53 +728,53 @@ def lotr_saplings(self, blockid, data):
             tex = self.load_image_texture("assets/lotr/textures/blocks/fruitSapling_cherry.png")
         elif data & 0x3 == 3: # Mango Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/fruitSapling_mango.png")
-    elif blockid == <lotr:tile.lotr:corruptMallorn>:
+    elif blockid == <lotr:tile.corruptMallorn>:
         if data & 0x3 == 0: # Corrupt Mallorn Sapling
             tex = self.load_image_texture("assets/lotr/textures/blocks/corruptMallorn.png")
     return self.build_sprite(tex)
 
-sprite(blockid=<lotr:tile.lotr:asphodel>, imagename="assets/lotr/textures/blocks/asphodel.png")
-sprite(blockid=<lotr:tile.lotr:aridGrass>, imagename="assets/lotr/textures/blocks/aridGrass.png")
-sprite(blockid=<lotr:tile.lotr:athelas>, imagename="assets/lotr/textures/blocks/athelas.png")
-sprite(blockid=<lotr:tile.lotr:bluebell>, imagename="assets/lotr/textures/blocks/bluebell.png")
-sprite(blockid=<lotr:tile.lotr:deadMarshPlant>, imagename="assets/lotr/textures/blocks/deadMarshPlant.png")
-sprite(blockid=<lotr:tile.lotr:dwarfHerb>, imagename="assets/lotr/textures/blocks/dwarfHerb.png")
-sprite(blockid=<lotr:tile.lotr:elanor>, imagename="assets/lotr/textures/blocks/elanor.png")
-sprite(blockid=<lotr:tile.lotr:flaxPlant>, imagename="assets/lotr/textures/blocks/flaxPlant.png")
-sprite(blockid=<lotr:tile.lotr:mordorGrass>, imagename="assets/lotr/textures/blocks/mordorGrass.png")
-sprite(blockid=<lotr:tile.lotr:mordorThorn>, imagename="assets/lotr/textures/blocks/mordorThorn.png")
-sprite(blockid=<lotr:tile.lotr:morgulShroom>, imagename="assets/lotr/textures/blocks/morgulShroom.png")
-sprite(blockid=<lotr:tile.lotr:niphredil>, imagename="assets/lotr/textures/blocks/niphredil.png")
-sprite(blockid=<lotr:tile.lotr:pipeweedPlant>, imagename="assets/lotr/textures/blocks/pipeweedPlant.png")
-sprite(blockid=<lotr:tile.lotr:shireHeather>, imagename="assets/lotr/textures/blocks/shireHeather.png")
-sprite(blockid=<lotr:tile.lotr:simbelmyne>, imagename="assets/lotr/textures/blocks/simbelmyne.png")
-sprite(blockid=<lotr:tile.lotr:webUngoliant>, imagename="assets/lotr/textures/blocks/webUngoliant.png")
+sprite(blockid=<lotr:tile.asphodel>, imagename="assets/lotr/textures/blocks/asphodel.png")
+sprite(blockid=<lotr:tile.aridGrass>, imagename="assets/lotr/textures/blocks/aridGrass.png")
+sprite(blockid=<lotr:tile.athelas>, imagename="assets/lotr/textures/blocks/athelas.png")
+sprite(blockid=<lotr:tile.bluebell>, imagename="assets/lotr/textures/blocks/bluebell.png")
+sprite(blockid=<lotr:tile.deadMarshPlant>, imagename="assets/lotr/textures/blocks/deadMarshPlant.png")
+sprite(blockid=<lotr:tile.dwarfHerb>, imagename="assets/lotr/textures/blocks/dwarfHerb.png")
+sprite(blockid=<lotr:tile.elanor>, imagename="assets/lotr/textures/blocks/elanor.png")
+sprite(blockid=<lotr:tile.flaxPlant>, imagename="assets/lotr/textures/blocks/flaxPlant.png")
+sprite(blockid=<lotr:tile.mordorGrass>, imagename="assets/lotr/textures/blocks/mordorGrass.png")
+sprite(blockid=<lotr:tile.mordorThorn>, imagename="assets/lotr/textures/blocks/mordorThorn.png")
+sprite(blockid=<lotr:tile.morgulShroom>, imagename="assets/lotr/textures/blocks/morgulShroom.png")
+sprite(blockid=<lotr:tile.niphredil>, imagename="assets/lotr/textures/blocks/niphredil.png")
+sprite(blockid=<lotr:tile.pipeweedPlant>, imagename="assets/lotr/textures/blocks/pipeweedPlant.png")
+sprite(blockid=<lotr:tile.shireHeather>, imagename="assets/lotr/textures/blocks/shireHeather.png")
+sprite(blockid=<lotr:tile.simbelmyne>, imagename="assets/lotr/textures/blocks/simbelmyne.png")
+sprite(blockid=<lotr:tile.webUngoliant>, imagename="assets/lotr/textures/blocks/webUngoliant.png")
 
 ##### Caveat: a bit ugly but will do... #####
-sprite(blockid=<lotr:tile.lotr:mug>, imagename="assets/lotr/textures/items/mug.png")
+sprite(blockid=<lotr:tile.mug>, imagename="assets/lotr/textures/items/mug.png")
 
-@material(blockid=<lotr:tile.lotr:mordorMoss>, data=range(16), transparent=True)
+@material(blockid=<lotr:tile.mordorMoss>, data=range(16), transparent=True)
 def mordorMoss(self, blockid, data):
     texture = self.load_image_texture("assets/lotr/textures/blocks/mordorMoss.png")
     return self.build_full_block((texture,15),texture,texture,texture,texture)
 
-@material(blockid=<lotr:tile.lotr:fangornRiverweed>, data=range(16), transparent=True)
+@material(blockid=<lotr:tile.fangornRiverweed>, data=range(16), transparent=True)
 def fangornRiverweed(self, blockid, data):
     texture = self.load_image_texture("assets/lotr/textures/blocks/fangornRiverweed.png")
     return self.build_full_block((texture,15),texture,texture,texture,texture)
 
-@material(blockid=<lotr:tile.lotr:thatchFloor>, data=range(16), transparent=True)
+@material(blockid=<lotr:tile.thatchFloor>, data=range(16), transparent=True)
 def thatchFloor(self, blockid, data):
     texture = self.load_image_texture("assets/lotr/textures/blocks/thatchFloor.png")
     return self.build_full_block((texture,15),texture,texture,texture,texture)
 
 ##### Caveat: a bit ugly but will do... #####
-@material(blockid=<lotr:tile.lotr:plate>, data=range(16), transparent=True)
+@material(blockid=<lotr:tile.plate>, data=range(16), transparent=True)
 def lotr_plate(self, blockid, data):
     texture = self.load_image_texture("assets/lotr/textures/blocks/plate_top.png")
     return self.build_full_block((texture,15),texture,texture,texture,texture)
 
-@material(blockid=<lotr:tile.lotr:pipeweed>, data=range(16), transparent=True)
+@material(blockid=<lotr:tile.pipeweed>, data=range(16), transparent=True)
 def pipeweed(self, blockid, data):
     if data == 0 or data == 1:
         tex = self.load_image_texture("assets/lotr/textures/blocks/pipeweed_0.png")
@@ -787,7 +786,7 @@ def pipeweed(self, blockid, data):
         tex = self.load_image_texture("assets/lotr/textures/blocks/pipeweed_3.png")
     return self.build_sprite(tex)
 
-@material(blockid=<lotr:tile.lotr:lettuce>, data=range(16), transparent=True)
+@material(blockid=<lotr:tile.lettuce>, data=range(16), transparent=True)
 def lettuce(self, blockid, data):
     if data == 0 or data == 1:
         tex = self.load_image_texture("assets/lotr/textures/blocks/lettuce_0.png")
@@ -799,7 +798,7 @@ def lettuce(self, blockid, data):
         tex = self.load_image_texture("assets/lotr/textures/blocks/lettuce_3.png")
     return self.build_sprite(tex)
 
-@material(blockid=<lotr:tile.lotr:flax>, data=range(16), transparent=True)
+@material(blockid=<lotr:tile.flax>, data=range(16), transparent=True)
 def flax(self, blockid, data):
     if data == 0 or data == 1:
         tex = self.load_image_texture("assets/lotr/textures/blocks/flax_0.png")
@@ -811,7 +810,7 @@ def flax(self, blockid, data):
         tex = self.load_image_texture("assets/lotr/textures/blocks/flaxPlant.png")
     return self.build_sprite(tex)
 
-@material(blockid=<lotr:tile.lotr:fangornPlant>, data=range(6), transparent=True)
+@material(blockid=<lotr:tile.fangornPlant>, data=range(6), transparent=True)
 def fangornPlant(self, blockid, data):
     if data == 0:    # Tears of Yavanna
         tex = self.load_image_texture("assets/lotr/textures/blocks/fangornPlant_green.png")
@@ -827,7 +826,7 @@ def fangornPlant(self, blockid, data):
         tex = self.load_image_texture("assets/lotr/textures/blocks/fangornPlant_silver.png")
     return self.build_sprite(tex)
 
-@material(blockid=<lotr:tile.lotr:haradFlower>, data=range(4), transparent=True)
+@material(blockid=<lotr:tile.haradFlower>, data=range(4), transparent=True)
 def haradFlower(self, blockid, data):
     if data == 0:    #  Red Sand Gem
         tex = self.load_image_texture("assets/lotr/textures/blocks/haradFlower_red.png")
@@ -839,7 +838,7 @@ def haradFlower(self, blockid, data):
         tex = self.load_image_texture("assets/lotr/textures/blocks/haradFlower_pink.png")
     return self.build_sprite(tex)
 
-@material(blockid=<lotr:tile.lotr:orcTorch>, data=range(2), transparent=True)
+@material(blockid=<lotr:tile.orcTorch>, data=range(2), transparent=True)
 def orcTorch(self, blockid, data):
     if data == 0:
         tex = self.load_image_texture("assets/lotr/textures/blocks/orcTorch_bottom.png")
@@ -852,7 +851,7 @@ def orcTorch(self, blockid, data):
 ################################################################################
 
 ##### Caveat: the top part of Flame of Harad and Hibiscus have the same data value than Yellow Iris, so they all have yellow tops #####
-@material(blockid=<lotr:tile.lotr:doubleFlower>, data=range(16), transparent=True)
+@material(blockid=<lotr:tile.doubleFlower>, data=range(16), transparent=True)
 def lotr_double_flowers(self, blockid, data):
     if data & 0x8:
         part = "top"
@@ -875,7 +874,7 @@ def lotr_double_flowers(self, blockid, data):
 # Werdoes ######################################################################
 ################################################################################
 
-@material(blockid=[<lotr:tile.lotr:stairsPine>, <lotr:tile.lotr:stairsMordorBrick>, <lotr:tile.lotr:stairsGondorBrick>, <lotr:tile.lotr:stairsMallorn>, <lotr:tile.lotr:stairsGondorBrickMossy>, <lotr:tile.lotr:stairsGondorBrickCracked>, <lotr:tile.lotr:stairsRohanBrick>, <lotr:tile.lotr:stairsDwarvenBrick>, <lotr:tile.lotr:stairsApple>, <lotr:tile.lotr:stairsPear>, <lotr:tile.lotr:stairsCherry>, <lotr:tile.lotr:stairsMirkOak>, <lotr:tile.lotr:stairsCharred>, <lotr:tile.lotr:stairsLebethron>, <lotr:tile.lotr:stairsBeech>, <lotr:tile.lotr:stairsMordorBrickCracked>, <lotr:tile.lotr:stairsElvenBrick>, <lotr:tile.lotr:stairsElvenBrickMossy>, <lotr:tile.lotr:stairsElvenBrickCracked>, <lotr:tile.lotr:stairsHolly>, <lotr:tile.lotr:stairsBlueRockBrick>, <lotr:tile.lotr:stairsAngmarBrick>, <lotr:tile.lotr:stairsAngmarBrickCracked>, <lotr:tile.lotr:stairsMango>, <lotr:tile.lotr:stairsBanana>, <lotr:tile.lotr:stairsMaple>, <lotr:tile.lotr:stairsLarch>, <lotr:tile.lotr:stairsRedRockBrick>, <lotr:tile.lotr:stairsNearHaradBrick>, <lotr:tile.lotr:stairsDatePalm>, <lotr:tile.lotr:stairsThatch>, <lotr:tile.lotr:stairsArnorBrick>, <lotr:tile.lotr:stairsArnorBrickMossy>, <lotr:tile.lotr:stairsArnorBrickCracked>, <lotr:tile.lotr:stairsUrukBrick>, <lotr:tile.lotr:stairsDolGuldurBrick>, <lotr:tile.lotr:stairsDolGuldurBrickCracked>, <lotr:tile.lotr:stairsMangrove>, <lotr:tile.lotr:stairsChestnut>, <lotr:tile.lotr:stairsBaobab>, <lotr:tile.lotr:stairsCedar>, <lotr:tile.lotr:stairsBlackGondorBrick>, <lotr:tile.lotr:stairsHighElvenBrick>, <lotr:tile.lotr:stairsHighElvenBrickMossy>, <lotr:tile.lotr:stairsHighElvenBrickCracked>, <lotr:tile.lotr:stairsWoodElvenBrick>, <lotr:tile.lotr:stairsWoodElvenBrickMossy>, <lotr:tile.lotr:stairsWoodElvenBrickCracked>, <lotr:tile.lotr:stairsDolAmrothBrick>, <lotr:tile.lotr:stairsFir>, <lotr:tile.lotr:stairsPinePine>, <lotr:tile.lotr:stairsMoredainBrick>, <lotr:tile.lotr:stairsNearHaradBrickCracked>], data=range(128), transparent=True, solid=True, nospawn=True)
+@material(blockid=[<lotr:tile.stairsPine>, <lotr:tile.stairsMordorBrick>, <lotr:tile.stairsGondorBrick>, <lotr:tile.stairsMallorn>, <lotr:tile.stairsGondorBrickMossy>, <lotr:tile.stairsGondorBrickCracked>, <lotr:tile.stairsRohanBrick>, <lotr:tile.stairsDwarvenBrick>, <lotr:tile.stairsApple>, <lotr:tile.stairsPear>, <lotr:tile.stairsCherry>, <lotr:tile.stairsMirkOak>, <lotr:tile.stairsCharred>, <lotr:tile.stairsLebethron>, <lotr:tile.stairsBeech>, <lotr:tile.stairsMordorBrickCracked>, <lotr:tile.stairsElvenBrick>, <lotr:tile.stairsElvenBrickMossy>, <lotr:tile.stairsElvenBrickCracked>, <lotr:tile.stairsHolly>, <lotr:tile.stairsBlueRockBrick>, <lotr:tile.stairsAngmarBrick>, <lotr:tile.stairsAngmarBrickCracked>, <lotr:tile.stairsMango>, <lotr:tile.stairsBanana>, <lotr:tile.stairsMaple>, <lotr:tile.stairsLarch>, <lotr:tile.stairsRedRockBrick>, <lotr:tile.stairsNearHaradBrick>, <lotr:tile.stairsDatePalm>, <lotr:tile.stairsThatch>, <lotr:tile.stairsArnorBrick>, <lotr:tile.stairsArnorBrickMossy>, <lotr:tile.stairsArnorBrickCracked>, <lotr:tile.stairsUrukBrick>, <lotr:tile.stairsDolGuldurBrick>, <lotr:tile.stairsDolGuldurBrickCracked>, <lotr:tile.stairsMangrove>, <lotr:tile.stairsChestnut>, <lotr:tile.stairsBaobab>, <lotr:tile.stairsCedar>, <lotr:tile.stairsBlackGondorBrick>, <lotr:tile.stairsHighElvenBrick>, <lotr:tile.stairsHighElvenBrickMossy>, <lotr:tile.stairsHighElvenBrickCracked>, <lotr:tile.stairsWoodElvenBrick>, <lotr:tile.stairsWoodElvenBrickMossy>, <lotr:tile.stairsWoodElvenBrickCracked>, <lotr:tile.stairsDolAmrothBrick>, <lotr:tile.stairsFir>, <lotr:tile.stairsPinePine>, <lotr:tile.stairsMoredainBrick>, <lotr:tile.stairsNearHaradBrickCracked>], data=range(128), transparent=True, solid=True, nospawn=True)
 def lotr_stairs(self, blockid, data):
     # preserve the upside-down bit
     upside_down = data & 0x4
@@ -888,111 +887,111 @@ def lotr_stairs(self, blockid, data):
     numpy.roll(quarters, [0,1,3,2][self.rotation])
     nw,ne,se,sw = quarters
 
-    if blockid == <lotr:tile.lotr:stairsPine>:
+    if blockid == <lotr:tile.stairsPine>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsMordorBrick>:
+    elif blockid == <lotr:tile.stairsMordorBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_mordor.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsGondorBrick>:
+    elif blockid == <lotr:tile.stairsGondorBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_gondor.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsMallorn>:
+    elif blockid == <lotr:tile.stairsMallorn>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_mallorn.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsGondorBrickMossy>:
+    elif blockid == <lotr:tile.stairsGondorBrickMossy>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_gondorMossy.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsGondorBrickCracked>:
+    elif blockid == <lotr:tile.stairsGondorBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_gondorCracked.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsRohanBrick>:
+    elif blockid == <lotr:tile.stairsRohanBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_rohan.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsDwarvenBrick>:
+    elif blockid == <lotr:tile.stairsDwarvenBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_dwarven.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsApple>:
+    elif blockid == <lotr:tile.stairsApple>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_apple.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsPear>:
+    elif blockid == <lotr:tile.stairsPear>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_pear.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsCherry>:
+    elif blockid == <lotr:tile.stairsCherry>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_cherry.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsMirkOak>:
+    elif blockid == <lotr:tile.stairsMirkOak>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_mirkOak.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsCharred>:
+    elif blockid == <lotr:tile.stairsCharred>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_charred.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsLebethron>:
+    elif blockid == <lotr:tile.stairsLebethron>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_lebethron.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsBeech>:
+    elif blockid == <lotr:tile.stairsBeech>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_beech.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsMordorBrickCracked>:
+    elif blockid == <lotr:tile.stairsMordorBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_mordorCracked.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsElvenBrick>:
+    elif blockid == <lotr:tile.stairsElvenBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_galadhrim.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsElvenBrickMossy>:
+    elif blockid == <lotr:tile.stairsElvenBrickMossy>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_galadhrimMossy.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsElvenBrickCracked>:
+    elif blockid == <lotr:tile.stairsElvenBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_galadhrimCracked.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsHolly>:
+    elif blockid == <lotr:tile.stairsHolly>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_holly.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsBlueRockBrick>:
+    elif blockid == <lotr:tile.stairsBlueRockBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_blueRock.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsAngmarBrick>:
+    elif blockid == <lotr:tile.stairsAngmarBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_angmar.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsAngmarBrickCracked>:
+    elif blockid == <lotr:tile.stairsAngmarBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_angmarCracked.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsMango>:
+    elif blockid == <lotr:tile.stairsMango>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_mango.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsBanana>:
+    elif blockid == <lotr:tile.stairsBanana>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_banana.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsMaple>:
+    elif blockid == <lotr:tile.stairsMaple>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_maple.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsLarch>:
+    elif blockid == <lotr:tile.stairsLarch>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_larch.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsRedRockBrick>:
+    elif blockid == <lotr:tile.stairsRedRockBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_redRock.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsNearHaradBrick>:
+    elif blockid == <lotr:tile.stairsNearHaradBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick_nearHarad.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsDatePalm>:
+    elif blockid == <lotr:tile.stairsDatePalm>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_datePalm.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsThatch>:
+    elif blockid == <lotr:tile.stairsThatch>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/thatch.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsArnorBrick>:
+    elif blockid == <lotr:tile.stairsArnorBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_arnor.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsArnorBrickMossy>:
+    elif blockid == <lotr:tile.stairsArnorBrickMossy>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_arnorMossy.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsArnorBrickCracked>:
+    elif blockid == <lotr:tile.stairsArnorBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_arnorCracked.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsUrukBrick>:
+    elif blockid == <lotr:tile.stairsUrukBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_uruk.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsDolGuldurBrick>:
+    elif blockid == <lotr:tile.stairsDolGuldurBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_dolGuldur.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsDolGuldurBrickCracked>:
+    elif blockid == <lotr:tile.stairsDolGuldurBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_dolGuldurCracked.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsMangrove>:
+    elif blockid == <lotr:tile.stairsMangrove>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks_mangrove.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsChestnut>:
+    elif blockid == <lotr:tile.stairsChestnut>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks2_chestnut.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsBaobab>:
+    elif blockid == <lotr:tile.stairsBaobab>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks2_baobab.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsCedar>:
+    elif blockid == <lotr:tile.stairsCedar>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks2_cedar.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsBlackGondorBrick>:
+    elif blockid == <lotr:tile.stairsBlackGondorBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick2_blackGondor.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsHighElvenBrick>:
+    elif blockid == <lotr:tile.stairsHighElvenBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_highElven.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsHighElvenBrickMossy>:
+    elif blockid == <lotr:tile.stairsHighElvenBrickMossy>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_highElvenMossy.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsHighElvenBrickCracked>:
+    elif blockid == <lotr:tile.stairsHighElvenBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_highElvenCracked.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsWoodElvenBrick>:
+    elif blockid == <lotr:tile.stairsWoodElvenBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_woodElven.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsWoodElvenBrickMossy>:
+    elif blockid == <lotr:tile.stairsWoodElvenBrickMossy>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_woodElvenMossy.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsWoodElvenBrickCracked>:
+    elif blockid == <lotr:tile.stairsWoodElvenBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_woodElvenCracked.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsDolAmrothBrick>:
+    elif blockid == <lotr:tile.stairsDolAmrothBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_dolAmroth.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsFir>:
+    elif blockid == <lotr:tile.stairsFir>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks2_fir.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsPinePine>:
+    elif blockid == <lotr:tile.stairsPinePine>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/planks2_pine.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsMoredainBrick>:
+    elif blockid == <lotr:tile.stairsMoredainBrick>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_moredain.png").copy()
-    elif blockid == <lotr:tile.lotr:stairsNearHaradBrickCracked>:
+    elif blockid == <lotr:tile.stairsNearHaradBrickCracked>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_nearHaradCracked.png").copy()
 
     outside_l = texture.copy()
@@ -1066,36 +1065,36 @@ def lotr_stairs(self, blockid, data):
 
     return img
 
-@material(blockid=[<lotr:tile.lotr:orcSteelBars>, <lotr:tile.lotr:bronzeBars>, <lotr:tile.lotr:goldBars>, <lotr:tile.lotr:silverBars>, <lotr:tile.lotr:mithrilBars>, <lotr:tile.lotr:urukBars>, <lotr:tile.lotr:highElfBars>, <lotr:tile.lotr:galadhrimBars>, <lotr:tile.lotr:woodElfBars>, <lotr:tile.lotr:dwarfBars>, <lotr:tile.lotr:blueDwarfBars>, <lotr:tile.lotr:highElfWoodBars>, <lotr:tile.lotr:galadhrimWoodBars>, <lotr:tile.lotr:woodElfWoodBars>], data=range(256), transparent=True, nospawn=True)
+@material(blockid=[<lotr:tile.orcSteelBars>, <lotr:tile.bronzeBars>, <lotr:tile.goldBars>, <lotr:tile.silverBars>, <lotr:tile.mithrilBars>, <lotr:tile.urukBars>, <lotr:tile.highElfBars>, <lotr:tile.galadhrimBars>, <lotr:tile.woodElfBars>, <lotr:tile.dwarfBars>, <lotr:tile.blueDwarfBars>, <lotr:tile.highElfWoodBars>, <lotr:tile.galadhrimWoodBars>, <lotr:tile.woodElfWoodBars>], data=range(256), transparent=True, nospawn=True)
 def lotr_bars(self, blockid, data):
     # no rotation, uses pseudo data
-    if blockid == <lotr:tile.lotr:orcSteelBars>:
+    if blockid == <lotr:tile.orcSteelBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/orcSteelBars.png")
-    elif blockid == <lotr:tile.lotr:bronzeBars>:
+    elif blockid == <lotr:tile.bronzeBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/bronzeBars.png")
-    elif blockid == <lotr:tile.lotr:goldBars>:
+    elif blockid == <lotr:tile.goldBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/goldBars.png")
-    elif blockid == <lotr:tile.lotr:silverBars>:
+    elif blockid == <lotr:tile.silverBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/silverBars.png")
-    elif blockid == <lotr:tile.lotr:mithrilBars>:
+    elif blockid == <lotr:tile.mithrilBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/mithrilBars.png")
-    elif blockid == <lotr:tile.lotr:urukBars>:
+    elif blockid == <lotr:tile.urukBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/urukBars.png")
-    elif blockid == <lotr:tile.lotr:highElfBars>:
+    elif blockid == <lotr:tile.highElfBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/highElfBars.png")
-    elif blockid == <lotr:tile.lotr:galadhrimBars>:
+    elif blockid == <lotr:tile.galadhrimBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/galadhrimBars.png")
-    elif blockid == <lotr:tile.lotr:woodElfBars>:
+    elif blockid == <lotr:tile.woodElfBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/woodElfBars.png")
-    elif blockid == <lotr:tile.lotr:dwarfBars>:
+    elif blockid == <lotr:tile.dwarfBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/dwarfBars.png")
-    elif blockid == <lotr:tile.lotr:blueDwarfBars>:
+    elif blockid == <lotr:tile.blueDwarfBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/blueDwarfBars.png")
-    elif blockid == <lotr:tile.lotr:highElfWoodBars>:
+    elif blockid == <lotr:tile.highElfWoodBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/highElfWoodBars.png")
-    elif blockid == <lotr:tile.lotr:galadhrimWoodBars>:
+    elif blockid == <lotr:tile.galadhrimWoodBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/galadhrimWoodBars.png")
-    elif blockid == <lotr:tile.lotr:woodElfWoodBars>:
+    elif blockid == <lotr:tile.woodElfWoodBars>:
         t = self.load_image_texture("assets/lotr/textures/blocks/woodElfWoodBars.png")
     left = t.copy()
     right = t.copy()
@@ -1124,11 +1123,11 @@ def lotr_bars(self, blockid, data):
         alpha_over(img,dw_right, (6,3),dw_right)  # bottom right
     return img
 
-@material(blockid=[<lotr:tile.lotr:woodSlabSingle>, <lotr:tile.lotr:woodSlabDouble>, <lotr:tile.lotr:woodSlabSingle2>, <lotr:tile.lotr:woodSlabDouble2>, <lotr:tile.lotr:woodSlabSingle3>, <lotr:tile.lotr:woodSlabDouble3>, <lotr:tile.lotr:slabSingle>, <lotr:tile.lotr:slabDouble>, <lotr:tile.lotr:slabSingle2>, <lotr:tile.lotr:slabDouble2>, <lotr:tile.lotr:slabSingle3>, <lotr:tile.lotr:slabDouble3>, <lotr:tile.lotr:slabSingle4>, <lotr:tile.lotr:slabDouble4>, <lotr:tile.lotr:slabSingle5>, <lotr:tile.lotr:slabDouble5>, <lotr:tile.lotr:slabSingle6>, <lotr:tile.lotr:slabDouble6>, <lotr:tile.lotr:slabSingle7>, <lotr:tile.lotr:slabDouble7>, <lotr:tile.lotr:slabSingleThatch>, <lotr:tile.lotr:slabDoubleThatch>], data=range(16), transparent=(44,), solid=True)
+@material(blockid=[<lotr:tile.woodSlabSingle>, <lotr:tile.woodSlabDouble>, <lotr:tile.woodSlabSingle2>, <lotr:tile.woodSlabDouble2>, <lotr:tile.woodSlabSingle3>, <lotr:tile.woodSlabDouble3>, <lotr:tile.slabSingle>, <lotr:tile.slabDouble>, <lotr:tile.slabSingle2>, <lotr:tile.slabDouble2>, <lotr:tile.slabSingle3>, <lotr:tile.slabDouble3>, <lotr:tile.slabSingle4>, <lotr:tile.slabDouble4>, <lotr:tile.slabSingle5>, <lotr:tile.slabDouble5>, <lotr:tile.slabSingle6>, <lotr:tile.slabDouble6>, <lotr:tile.slabSingle7>, <lotr:tile.slabDouble7>, <lotr:tile.slabSingleThatch>, <lotr:tile.slabDoubleThatch>], data=range(16), transparent=(44,), solid=True)
 def lotr_slabs(self, blockid, data):
     t = data & 7
     top = side = self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png")
-    if blockid == <lotr:tile.lotr:woodSlabSingle> or blockid == <lotr:tile.lotr:woodSlabDouble>:
+    if blockid == <lotr:tile.woodSlabSingle> or blockid == <lotr:tile.woodSlabDouble>:
         if t == 0:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png")
 	elif t == 1:
@@ -1145,7 +1144,7 @@ def lotr_slabs(self, blockid, data):
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks_cherry.png")
 	elif t == 7:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks_mango.png")
-    elif blockid == <lotr:tile.lotr:woodSlabSingle2> or blockid == <lotr:tile.lotr:woodSlabDouble2>:
+    elif blockid == <lotr:tile.woodSlabSingle2> or blockid == <lotr:tile.woodSlabDouble2>:
         if t == 0:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks_lebethron.png")
 	elif t == 1:
@@ -1162,7 +1161,7 @@ def lotr_slabs(self, blockid, data):
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks_datePalm.png")
 	elif t == 7:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks_mangrove.png")
-    elif blockid == <lotr:tile.lotr:woodSlabSingle3> or blockid == <lotr:tile.lotr:woodSlabDouble3>:
+    elif blockid == <lotr:tile.woodSlabSingle3> or blockid == <lotr:tile.woodSlabDouble3>:
         if t == 0:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks2_chestnut.png")
 	elif t == 1:
@@ -1173,7 +1172,7 @@ def lotr_slabs(self, blockid, data):
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks2_fir.png")
 	elif t == 4:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/planks2_pine.png")
-    elif blockid == <lotr:tile.lotr:slabSingle> or blockid == <lotr:tile.lotr:slabDouble>:
+    elif blockid == <lotr:tile.slabSingle> or blockid == <lotr:tile.slabDouble>:
         if t == 0:
             top  = self.load_image_texture("assets/lotr/textures/blocks/slab_mordorRock_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/slab_mordorRock_side.png")
@@ -1192,7 +1191,7 @@ def lotr_slabs(self, blockid, data):
             top = side = self.load_image_texture("assets/lotr/textures/blocks/brick_rohan.png")
 	elif t == 7:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/brick_dwarven.png")
-    elif blockid == <lotr:tile.lotr:slabSingle2> or blockid == <lotr:tile.lotr:slabDouble2>:
+    elif blockid == <lotr:tile.slabSingle2> or blockid == <lotr:tile.slabDouble2>:
         if t == 0:
             top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_dwarven_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_dwarven_sideBottom.png")
@@ -1213,7 +1212,7 @@ def lotr_slabs(self, blockid, data):
 	elif t == 7:
             top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_galadhrimCracked_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_galadhrimCracked_sideBottom.png")
-    elif blockid == <lotr:tile.lotr:slabSingle3> or blockid == <lotr:tile.lotr:slabDouble3>:
+    elif blockid == <lotr:tile.slabSingle3> or blockid == <lotr:tile.slabDouble3>:
         if t == 0:
             top  = self.load_image_texture("assets/lotr/textures/blocks/slab_blueRock_top.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/slab_blueRock_side.png")
@@ -1234,7 +1233,7 @@ def lotr_slabs(self, blockid, data):
 	elif t == 7:
             top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_redRock_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_redRock_sideBottom.png")
-    elif blockid == <lotr:tile.lotr:slabSingle4> or blockid == <lotr:tile.lotr:slabDouble4>:
+    elif blockid == <lotr:tile.slabSingle4> or blockid == <lotr:tile.slabDouble4>:
         if t == 0:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/brick_nearHarad.png")
 	elif t == 1:
@@ -1252,7 +1251,7 @@ def lotr_slabs(self, blockid, data):
 	elif t == 7:
             top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_nearHarad_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_nearHarad_sideBottom.png")
-    elif blockid == <lotr:tile.lotr:slabSingle5> or blockid == <lotr:tile.lotr:slabDouble5>:
+    elif blockid == <lotr:tile.slabSingle5> or blockid == <lotr:tile.slabDouble5>:
         if t == 0:
             top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_gondor_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_gondor_sideBottom.png")
@@ -1273,7 +1272,7 @@ def lotr_slabs(self, blockid, data):
             top = side = self.load_image_texture("assets/lotr/textures/blocks/brick3_highElvenMossy.png")
 	elif t == 7:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/brick3_highElvenCracked.png")
-    elif blockid == <lotr:tile.lotr:slabSingle6> or blockid == <lotr:tile.lotr:slabDouble6>:
+    elif blockid == <lotr:tile.slabSingle6> or blockid == <lotr:tile.slabDouble6>:
         if t == 0:
             top  = self.load_image_texture("assets/lotr/textures/blocks/pillar_highElven_face.png")
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_highElven_sideBottom.png")
@@ -1294,19 +1293,19 @@ def lotr_slabs(self, blockid, data):
             side = self.load_image_texture("assets/lotr/textures/blocks/pillar_woodElvenCracked_sideBottom.png")
 	elif t == 7:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/brick3_dolAmroth.png")
-    elif blockid == <lotr:tile.lotr:slabSingle7> or blockid == <lotr:tile.lotr:slabDouble7>:
+    elif blockid == <lotr:tile.slabSingle7> or blockid == <lotr:tile.slabDouble7>:
         if t == 0:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/brick3_moredain.png")
 	elif t == 1:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/brick3_nearHaradCracked.png")
-    elif blockid == <lotr:tile.lotr:slabSingleThatch> or blockid == <lotr:tile.lotr:slabDoubleThatch>:
+    elif blockid == <lotr:tile.slabSingleThatch> or blockid == <lotr:tile.slabDoubleThatch>:
         if t == 0:
             top = side = self.load_image_texture("assets/lotr/textures/blocks/thatch.png")
     else:
         return None
     
     # double slabs:
-    if blockid == <lotr:tile.lotr:woodSlabDouble> or blockid == <lotr:tile.lotr:woodSlabDouble2> or blockid == <lotr:tile.lotr:woodSlabDouble3> or blockid == <lotr:tile.lotr:slabDouble> or blockid == <lotr:tile.lotr:slabDouble2> or blockid == <lotr:tile.lotr:slabDouble3> or blockid == <lotr:tile.lotr:slabDouble4> or blockid == <lotr:tile.lotr:slabDouble5> or blockid == <lotr:tile.lotr:slabDouble6> or blockid == <lotr:tile.lotr:slabDouble7> or blockid == <lotr:tile.lotr:slabDoubleThatch>:
+    if blockid == <lotr:tile.woodSlabDouble> or blockid == <lotr:tile.woodSlabDouble2> or blockid == <lotr:tile.woodSlabDouble3> or blockid == <lotr:tile.slabDouble> or blockid == <lotr:tile.slabDouble2> or blockid == <lotr:tile.slabDouble3> or blockid == <lotr:tile.slabDouble4> or blockid == <lotr:tile.slabDouble5> or blockid == <lotr:tile.slabDouble6> or blockid == <lotr:tile.slabDouble7> or blockid == <lotr:tile.slabDoubleThatch>:
         return self.build_block(top, side)
     
     # cut the side texture in half
@@ -1338,10 +1337,10 @@ def lotr_slabs(self, blockid, data):
     
     return img
 
-@material(blockid=[<lotr:tile.lotr:wallStone>, <lotr:tile.lotr:wallStone2>, <lotr:tile.lotr:wallStone3>], data=range(32), transparent=True, nospawn=True)
+@material(blockid=[<lotr:tile.wallStone>, <lotr:tile.wallStone2>, <lotr:tile.wallStone3>], data=range(32), transparent=True, nospawn=True)
 def lotr_walls(self, blockid, data):
     t = self.load_image_texture("assets/minecraft/textures/blocks/cobblestone.png").copy()
-    if blockid == <lotr:tile.lotr:wallStone>:
+    if blockid == <lotr:tile.wallStone>:
         if data == 0:
             t = self.load_image_texture("assets/lotr/textures/blocks/rock_mordor.png").copy()
         elif data == 1:
@@ -1374,7 +1373,7 @@ def lotr_walls(self, blockid, data):
             t = self.load_image_texture("assets/lotr/textures/blocks/brick_blueRock.png").copy()
         elif data == 15:
             t = self.load_image_texture("assets/lotr/textures/blocks/brick_nearHarad.png").copy()
-    elif blockid == <lotr:tile.lotr:wallStone2>:
+    elif blockid == <lotr:tile.wallStone2>:
         if data == 0:
             t = self.load_image_texture("assets/lotr/textures/blocks/brick2_angmar.png").copy()
         elif data == 1:
@@ -1407,7 +1406,7 @@ def lotr_walls(self, blockid, data):
             t = self.load_image_texture("assets/lotr/textures/blocks/brick3_dolAmroth.png").copy()
         elif data == 15:
             t = self.load_image_texture("assets/lotr/textures/blocks/brick3_moredain.png").copy()
-    elif blockid == <lotr:tile.lotr:wallStone3>:
+    elif blockid == <lotr:tile.wallStone3>:
         if data == 0:
             t = self.load_image_texture("assets/lotr/textures/blocks/brick3_woodElven.png").copy()
         elif data == 1:
@@ -1534,12 +1533,12 @@ def lotr_walls(self, blockid, data):
     
     return img
 
-@material(blockid=[<lotr:tile.lotr:fence>, <lotr:tile.lotr:fence2>], data=range(16), transparent=True, nospawn=True)
+@material(blockid=[<lotr:tile.fence>, <lotr:tile.fence2>], data=range(16), transparent=True, nospawn=True)
 def lotr_fences(self, blockid, data):
     fence_top = self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png").copy()
     fence_side = self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png").copy()
     fence_small_side = self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png").copy()
-    if blockid == <lotr:tile.lotr:fence>:
+    if blockid == <lotr:tile.fence>:
         if data == 0:
             fence_top = fence_side = fence_small_side = self.load_image_texture("assets/lotr/textures/blocks/planks_shirePine.png").copy()
         elif data == 1:
@@ -1572,7 +1571,7 @@ def lotr_fences(self, blockid, data):
             fence_top = fence_side = fence_small_side = self.load_image_texture("assets/lotr/textures/blocks/planks_datePalm.png").copy()
         elif data == 15:
             fence_top = fence_side = fence_small_side = self.load_image_texture("assets/lotr/textures/blocks/planks_mangrove.png").copy()
-    elif blockid == <lotr:tile.lotr:fence2>:
+    elif blockid == <lotr:tile.fence2>:
         if data == 0:
             fence_top = fence_side = fence_small_side = self.load_image_texture("assets/lotr/textures/blocks/planks2_chestnut.png").copy()
         elif data == 1:
@@ -1666,7 +1665,7 @@ def lotr_fences(self, blockid, data):
     
     return img
 
-@material(blockid=<lotr:tile.lotr:mallornLadder>, data=[2, 3, 4, 5], transparent=True)
+@material(blockid=<lotr:tile.mallornLadder>, data=[2, 3, 4, 5], transparent=True)
 def mallornLadder(self, blockid, data):
     # first rotations
     if self.rotation == 1:
@@ -1706,7 +1705,7 @@ def mallornLadder(self, blockid, data):
         alpha_over(img, tex, (12,0), tex)
         return img
 
-@material(blockid=[<lotr:tile.lotr:mallornTorch>, <lotr:tile.lotr:woodElvenTorch>, <lotr:tile.lotr:highElvenTorch>, <lotr:tile.lotr:morgulTorch>], data=[1, 2, 3, 4, 5], transparent=True)
+@material(blockid=[<lotr:tile.mallornTorch>, <lotr:tile.woodElvenTorch>, <lotr:tile.highElvenTorch>, <lotr:tile.morgulTorch>], data=[1, 2, 3, 4, 5], transparent=True)
 def lotr_torches(self, blockid, data):
     # first, rotations
     if self.rotation == 1:
@@ -1726,13 +1725,13 @@ def lotr_torches(self, blockid, data):
         elif data == 4: data = 2
     
     # choose the proper texture
-    if blockid == <lotr:tile.lotr:mallornTorch>:
+    if blockid == <lotr:tile.mallornTorch>:
         small = self.load_image_texture("assets/lotr/textures/blocks/mallornTorch.png")
-    elif blockid == <lotr:tile.lotr:woodElvenTorch>:
+    elif blockid == <lotr:tile.woodElvenTorch>:
         small = self.load_image_texture("assets/lotr/textures/blocks/woodElvenTorch.png")
-    elif blockid == <lotr:tile.lotr:highElvenTorch>:
+    elif blockid == <lotr:tile.highElvenTorch>:
         small = self.load_image_texture("assets/lotr/textures/blocks/highElvenTorch.png")
-    elif blockid == <lotr:tile.lotr:morgulTorch>:
+    elif blockid == <lotr:tile.morgulTorch>:
         small = self.load_image_texture("assets/lotr/textures/blocks/morgulTorch.png")
 
     # Misc/lotr244.blocks.textures.txt:orcTorch_bottom.png
@@ -1781,7 +1780,7 @@ def lotr_torches(self, blockid, data):
         
     return img
 
-@material(blockid=[<lotr:tile.lotr:elvenBed>, <lotr:tile.lotr:woodElvenBed>, <lotr:tile.lotr:dwarvenBed>, <lotr:tile.lotr:orcBed>, <lotr:tile.lotr:lionBed>, <lotr:tile.lotr:highElvenBed>, <lotr:tile.lotr:strawBed>], data=range(12), transparent=True, nospawn=True)
+@material(blockid=[<lotr:tile.elvenBed>, <lotr:tile.woodElvenBed>, <lotr:tile.dwarvenBed>, <lotr:tile.orcBed>, <lotr:tile.lionBed>, <lotr:tile.highElvenBed>, <lotr:tile.strawBed>], data=range(12), transparent=True, nospawn=True)
 def lotr_beds(self, blockid, data):
     # first get rotation done
     # Masked to not clobber block head/foot info
@@ -1801,49 +1800,49 @@ def lotr_beds(self, blockid, data):
         elif (data & 0b0011) == 2: data = data & 0b1100 | 1
         elif (data & 0b0011) == 3: data = data & 0b1100 | 2
  
-    if blockid == <lotr:tile.lotr:elvenBed>:
+    if blockid == <lotr:tile.elvenBed>:
         feetEnd  = "assets/lotr/textures/blocks/elvenBed_feet_end.png"
         feetSide = "assets/lotr/textures/blocks/elvenBed_feet_side.png"
         feetTop  = "assets/lotr/textures/blocks/elvenBed_feet_top.png"
         headEnd  = "assets/lotr/textures/blocks/elvenBed_head_end.png"
         headSide = "assets/lotr/textures/blocks/elvenBed_head_side.png"
         headTop  = "assets/lotr/textures/blocks/elvenBed_head_top.png"
-    elif blockid == <lotr:tile.lotr:woodElvenBed>:
+    elif blockid == <lotr:tile.woodElvenBed>:
         feetEnd  = "assets/lotr/textures/blocks/woodElvenBed_feet_end.png"
         feetSide = "assets/lotr/textures/blocks/woodElvenBed_feet_side.png"
         feetTop  = "assets/lotr/textures/blocks/woodElvenBed_feet_top.png"
         headEnd  = "assets/lotr/textures/blocks/woodElvenBed_head_end.png"
         headSide = "assets/lotr/textures/blocks/woodElvenBed_head_side.png"
         headTop  = "assets/lotr/textures/blocks/woodElvenBed_head_top.png"
-    elif blockid == <lotr:tile.lotr:dwarvenBed>:
+    elif blockid == <lotr:tile.dwarvenBed>:
         feetEnd  = "assets/lotr/textures/blocks/dwarvenBed_feet_end.png"
         feetSide = "assets/lotr/textures/blocks/dwarvenBed_feet_side.png"
         feetTop  = "assets/lotr/textures/blocks/dwarvenBed_feet_top.png"
         headEnd  = "assets/lotr/textures/blocks/dwarvenBed_head_end.png"
         headSide = "assets/lotr/textures/blocks/dwarvenBed_head_side.png"
         headTop  = "assets/lotr/textures/blocks/dwarvenBed_head_top.png"
-    elif blockid == <lotr:tile.lotr:orcBed>:
+    elif blockid == <lotr:tile.orcBed>:
         feetEnd  = "assets/lotr/textures/blocks/orcBed_feet_end.png"
         feetSide = "assets/lotr/textures/blocks/orcBed_feet_side.png"
         feetTop  = "assets/lotr/textures/blocks/orcBed_feet_top.png"
         headEnd  = "assets/lotr/textures/blocks/orcBed_head_end.png"
         headSide = "assets/lotr/textures/blocks/orcBed_head_side.png"
         headTop  = "assets/lotr/textures/blocks/orcBed_head_top.png"
-    elif blockid == <lotr:tile.lotr:lionBed>:
+    elif blockid == <lotr:tile.lionBed>:
         feetEnd  = "assets/lotr/textures/blocks/lionBed_feet_end.png"
         feetSide = "assets/lotr/textures/blocks/lionBed_feet_side.png"
         feetTop  = "assets/lotr/textures/blocks/lionBed_feet_top.png"
         headEnd  = "assets/lotr/textures/blocks/lionBed_head_end.png"
         headSide = "assets/lotr/textures/blocks/lionBed_head_side.png"
         headTop  = "assets/lotr/textures/blocks/lionBed_head_top.png"
-    elif blockid == <lotr:tile.lotr:highElvenBed>:
+    elif blockid == <lotr:tile.highElvenBed>:
         feetEnd  = "assets/lotr/textures/blocks/highElvenBed_feet_end.png"
         feetSide = "assets/lotr/textures/blocks/highElvenBed_feet_side.png"
         feetTop  = "assets/lotr/textures/blocks/highElvenBed_feet_top.png"
         headEnd  = "assets/lotr/textures/blocks/highElvenBed_head_end.png"
         headSide = "assets/lotr/textures/blocks/highElvenBed_head_side.png"
         headTop  = "assets/lotr/textures/blocks/highElvenBed_head_top.png"
-    elif blockid == <lotr:tile.lotr:strawBed>:
+    elif blockid == <lotr:tile.strawBed>:
         feetEnd  = "assets/lotr/textures/blocks/strawBed_feet_end.png"
         feetSide = "assets/lotr/textures/blocks/strawBed_feet_side.png"
         feetTop  = "assets/lotr/textures/blocks/strawBed_feet_top.png"
@@ -1893,17 +1892,17 @@ def lotr_beds(self, blockid, data):
     top = (top, increment)
     return self.build_full_block(top, None, None, left_face, right_face)
 
-@material(blockid=[<lotr:tile.lotr:pressurePlateMordorRock>, <lotr:tile.lotr:pressurePlateGondorRock>, <lotr:tile.lotr:pressurePlateRohanRock>, <lotr:tile.lotr:pressurePlateBlueRock>, <lotr:tile.lotr:pressurePlateRedRock>], data=[0,1], transparent=True)
+@material(blockid=[<lotr:tile.pressurePlateMordorRock>, <lotr:tile.pressurePlateGondorRock>, <lotr:tile.pressurePlateRohanRock>, <lotr:tile.pressurePlateBlueRock>, <lotr:tile.pressurePlateRedRock>], data=[0,1], transparent=True)
 def lotr_pressure_plates(self, blockid, data):
-    if blockid == <lotr:tile.lotr:pressurePlateMordorRock>:
+    if blockid == <lotr:tile.pressurePlateMordorRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_mordor.png").copy()
-    elif blockid == <lotr:tile.lotr:pressurePlateGondorRock>:
+    elif blockid == <lotr:tile.pressurePlateGondorRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_gondor.png").copy()
-    elif blockid == <lotr:tile.lotr:pressurePlateRohanRock>:
+    elif blockid == <lotr:tile.pressurePlateRohanRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_rohan.png").copy()
-    elif blockid == <lotr:tile.lotr:pressurePlateBlueRock>:
+    elif blockid == <lotr:tile.pressurePlateBlueRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_blue.png").copy()
-    elif blockid == <lotr:tile.lotr:pressurePlateRedRock>:
+    elif blockid == <lotr:tile.pressurePlateRedRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_red.png").copy()
     
     # cut out the outside border, pressure plates are smaller
@@ -1929,7 +1928,7 @@ def lotr_pressure_plates(self, blockid, data):
     
     return img
 
-@material(blockid=[<lotr:tile.lotr:buttonMordorRock>, <lotr:tile.lotr:buttonGondorRock>, <lotr:tile.lotr:buttonRohanRock>, <lotr:tile.lotr:buttonBlueRock>, <lotr:tile.lotr:buttonRedRock>], data=range(16), transparent=True)
+@material(blockid=[<lotr:tile.buttonMordorRock>, <lotr:tile.buttonGondorRock>, <lotr:tile.buttonRohanRock>, <lotr:tile.buttonBlueRock>, <lotr:tile.buttonRedRock>], data=range(16), transparent=True)
 def lotr_buttons(self, blockid, data):
 
     # 0x8 is set if the button is pressed mask this info and render
@@ -1952,15 +1951,15 @@ def lotr_buttons(self, blockid, data):
         elif data == 3: data = 1
         elif data == 4: data = 2
 
-    if blockid == <lotr:tile.lotr:buttonMordorRock>:
+    if blockid == <lotr:tile.buttonMordorRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_mordor.png").copy()
-    elif blockid == <lotr:tile.lotr:buttonGondorRock>:
+    elif blockid == <lotr:tile.buttonGondorRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_gondor.png").copy()
-    elif blockid == <lotr:tile.lotr:buttonRohanRock>:
+    elif blockid == <lotr:tile.buttonRohanRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_rohan.png").copy()
-    elif blockid == <lotr:tile.lotr:buttonBlueRock>:
+    elif blockid == <lotr:tile.buttonBlueRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_blue.png").copy()
-    elif blockid == <lotr:tile.lotr:buttonRedRock>:
+    elif blockid == <lotr:tile.buttonRedRock>:
         t = self.load_image_texture("assets/lotr/textures/blocks/rock_red.png").copy()
 
     # generate the texture for the button
@@ -2010,12 +2009,12 @@ def lotr_buttons(self, blockid, data):
 # These don't work !!! #########################################################
 ################################################################################
 
-@material(blockid=<lotr:tile.lotr:commandTable>, data=range(1), solid=True)
+@material(blockid=<lotr:tile.commandTable>, data=range(1), solid=True)
 def commandTable(self, blockid, data):
     return self.build_block(self.load_image_texture("assets/lotr/textures/blocks/commandTable_top.png"), self.load_image_texture("assets/lotr/textures/blocks/commandTable_side.png"))
 
 ##### Caveat: clovers are not supported #####
-#@material(blockid=<lotr:tile.lotr:clover>, data=range(2), transparent=True)
+#@material(blockid=<lotr:tile.clover>, data=range(2), transparent=True)
 #def clover(self, blockid, data):
 #    if data == 0:    # Clover
 #        tex = self.load_image_texture("assets/lotr/textures/blocks/clover_petal.png")
@@ -2024,7 +2023,7 @@ def commandTable(self, blockid, data):
 #    return self.build_sprite(tex)
 
 ##### Caveat: tallGrass are not supported #####
-#@material(blockid=<lotr:tile.lotr:tallGrass>, data=range(4), transparent=True)
+#@material(blockid=<lotr:tile.tallGrass>, data=range(4), transparent=True)
 #def tallGrass(self, blockid, data):
 #    if data == 0:    # Short Grass
 #        tex = self.load_image_texture("assets/lotr/textures/blocks/tallGrass_short.png")
