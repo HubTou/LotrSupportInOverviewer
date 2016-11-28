@@ -1,6 +1,6 @@
 About LotrSupportInOverviewer
 =============================
-A tool that can generate a new Minecraft Overviewer textures jar including the Lord of the Rings Mod's textures, and modify installed Overviewer software taking into account local block IDs, so that the Minecraft Overviewer can support LOTR's new blocks rendering (up to beta 24.4, so far).
+A tool that can generate a new Minecraft Overviewer textures jar including the Lord of the Rings Mod's textures, and modify installed Overviewer software taking into account local block IDs, so that the Minecraft Overviewer can support LOTR's new blocks rendering (up to beta 24.4, so far, with an ongoing effort to support beta 30.3).
 
 
 Installation
@@ -66,6 +66,7 @@ Blocks without textures are missing (beacons, stalactite, flower pots, elven & m
 Versions and changelog
 ======================
 
+	1.10	2016-11-28	Started support for LOTR Mod B30.3
 	1.09	2015-10-31	Added support for LOTR Utumno bricks (used for The Pits)
 	1.08	2015-10-24	Added support for LOTR mallornLadder, torches, orcTorches, beds, buttons, pressure plates,
 						Utumno pillars, thatch floors, orcBombs
@@ -83,7 +84,6 @@ Versions and changelog
  						Added multiple block IDs substitutions on the same line
 	1.01	2015-10-07	Added support for LOTR rocks, leaves, planks, bricks, ore blocks
 	1.00	2015-09-27	Initial release
-
 
 License
 =======
@@ -107,4 +107,4 @@ Author
 ======
 Hubert Tournier
 
-October, 31 2015
+November, 28 2016
