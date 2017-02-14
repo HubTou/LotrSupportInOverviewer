@@ -30,22 +30,22 @@
 							      >	612	sapling6
 							      >	613	woodSlabSingle4
 							      >	614	woodSlabDouble4
-							      >	615	stairsMahogany
+615	stairsMahogany
 616	mud
 617	mudGrass
 							      >	618	chestStone
 							      >	619	spawnerChestStone
 620	mudFarmland
-							      >	621	stairsNearHaradBrickRed
-							      >	622	stairsNearHaradBrickRedCracked
+621	stairsNearHaradBrickRed
+622	stairsNearHaradBrickRedCracked
 623	redSandstone
 624	stairsRedSandstone
-							      >	625	stairsDwarvenBrickCracked
+625	stairsDwarvenBrickCracked
 							      >	626	pillar2
 627	hithlainLadder
 							      >	628	reeds
-							      >	629	stairsReed
-							      >	630	tauredainDoubleTorch
+629	stairsReed
+630	tauredainDoubleTorch
 							      >	631	woodBeamV1
 							      >	632	reedBars
 							      >	633	woodBeamV2

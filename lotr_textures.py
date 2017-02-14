@@ -862,12 +862,18 @@ def haradFlower(self, blockid, data):
         tex = self.load_image_texture("assets/lotr/textures/blocks/haradFlower_pink.png")
     return self.build_sprite(tex)
 
-@material(blockid=<lotr:tile.orcTorch>, data=range(2), transparent=True)
-def orcTorch(self, blockid, data):
-    if data == 0:
-        tex = self.load_image_texture("assets/lotr/textures/blocks/orcTorch_bottom.png")
-    elif data == 1:
-        tex = self.load_image_texture("assets/lotr/textures/blocks/orcTorch_top.png")
+@material(blockid=[<lotr:tile.orcTorch>, <lotr:tile.tauredainDoubleTorch>], data=range(2), transparent=True)
+def tallTorch(self, blockid, data):
+    if blockid == <lotr:tile.orcTorch>:
+        if data == 0:
+            tex = self.load_image_texture("assets/lotr/textures/blocks/orcTorch_bottom.png")
+        elif data == 1:
+            tex = self.load_image_texture("assets/lotr/textures/blocks/orcTorch_top.png")
+    elif blockid == <lotr:tile.tauredainDoubleTorch>:
+        if data == 0:
+            tex = self.load_image_texture("assets/lotr/textures/blocks/tauredainDoubleTorch_bottom.png")
+        elif data == 1:
+            tex = self.load_image_texture("assets/lotr/textures/blocks/tauredainDoubleTorch_top.png")
     return self.build_sprite(tex)
 
 ################################################################################
@@ -895,10 +901,10 @@ def lotr_double_flowers(self, blockid, data):
     return img
 
 ################################################################################
-# Werdoes ######################################################################
+# Weirdoes ######################################################################
 ################################################################################
 
-@material(blockid=[<lotr:tile.stairsPine>, <lotr:tile.stairsMordorBrick>, <lotr:tile.stairsGondorBrick>, <lotr:tile.stairsMallorn>, <lotr:tile.stairsGondorBrickMossy>, <lotr:tile.stairsGondorBrickCracked>, <lotr:tile.stairsRohanBrick>, <lotr:tile.stairsDwarvenBrick>, <lotr:tile.stairsApple>, <lotr:tile.stairsPear>, <lotr:tile.stairsCherry>, <lotr:tile.stairsMirkOak>, <lotr:tile.stairsCharred>, <lotr:tile.stairsLebethron>, <lotr:tile.stairsBeech>, <lotr:tile.stairsMordorBrickCracked>, <lotr:tile.stairsElvenBrick>, <lotr:tile.stairsElvenBrickMossy>, <lotr:tile.stairsElvenBrickCracked>, <lotr:tile.stairsHolly>, <lotr:tile.stairsBlueRockBrick>, <lotr:tile.stairsAngmarBrick>, <lotr:tile.stairsAngmarBrickCracked>, <lotr:tile.stairsMango>, <lotr:tile.stairsBanana>, <lotr:tile.stairsMaple>, <lotr:tile.stairsLarch>, <lotr:tile.stairsRedRockBrick>, <lotr:tile.stairsNearHaradBrick>, <lotr:tile.stairsDatePalm>, <lotr:tile.stairsThatch>, <lotr:tile.stairsArnorBrick>, <lotr:tile.stairsArnorBrickMossy>, <lotr:tile.stairsArnorBrickCracked>, <lotr:tile.stairsUrukBrick>, <lotr:tile.stairsDolGuldurBrick>, <lotr:tile.stairsDolGuldurBrickCracked>, <lotr:tile.stairsMangrove>, <lotr:tile.stairsChestnut>, <lotr:tile.stairsBaobab>, <lotr:tile.stairsCedar>, <lotr:tile.stairsBlackGondorBrick>, <lotr:tile.stairsHighElvenBrick>, <lotr:tile.stairsHighElvenBrickMossy>, <lotr:tile.stairsHighElvenBrickCracked>, <lotr:tile.stairsWoodElvenBrick>, <lotr:tile.stairsWoodElvenBrickMossy>, <lotr:tile.stairsWoodElvenBrickCracked>, <lotr:tile.stairsDolAmrothBrick>, <lotr:tile.stairsFir>, <lotr:tile.stairsPinePine>, <lotr:tile.stairsMoredainBrick>, <lotr:tile.stairsNearHaradBrickCracked>, <lotr:tile.stairsRedSandstone>, <lotr:tile.stairsRotten>, <lotr:tile.stairsScorchedStone>, <lotr:tile.stairsLemon>, <lotr:tile.stairsOrange>, <lotr:tile.stairsLime>, <lotr:tile.stairsTauredainBrick>, <lotr:tile.stairsTauredainBrickMossy>, <lotr:tile.stairsTauredainBrickCracked>, <lotr:tile.stairsTauredainBrickGold>, <lotr:tile.stairsTauredainBrickObsidian>], data=range(128), transparent=True, solid=True, nospawn=True)
+@material(blockid=[<lotr:tile.stairsPine>, <lotr:tile.stairsMordorBrick>, <lotr:tile.stairsGondorBrick>, <lotr:tile.stairsMallorn>, <lotr:tile.stairsGondorBrickMossy>, <lotr:tile.stairsGondorBrickCracked>, <lotr:tile.stairsRohanBrick>, <lotr:tile.stairsDwarvenBrick>, <lotr:tile.stairsApple>, <lotr:tile.stairsPear>, <lotr:tile.stairsCherry>, <lotr:tile.stairsMirkOak>, <lotr:tile.stairsCharred>, <lotr:tile.stairsLebethron>, <lotr:tile.stairsBeech>, <lotr:tile.stairsMordorBrickCracked>, <lotr:tile.stairsElvenBrick>, <lotr:tile.stairsElvenBrickMossy>, <lotr:tile.stairsElvenBrickCracked>, <lotr:tile.stairsHolly>, <lotr:tile.stairsBlueRockBrick>, <lotr:tile.stairsAngmarBrick>, <lotr:tile.stairsAngmarBrickCracked>, <lotr:tile.stairsMango>, <lotr:tile.stairsBanana>, <lotr:tile.stairsMaple>, <lotr:tile.stairsLarch>, <lotr:tile.stairsRedRockBrick>, <lotr:tile.stairsNearHaradBrick>, <lotr:tile.stairsDatePalm>, <lotr:tile.stairsThatch>, <lotr:tile.stairsArnorBrick>, <lotr:tile.stairsArnorBrickMossy>, <lotr:tile.stairsArnorBrickCracked>, <lotr:tile.stairsUrukBrick>, <lotr:tile.stairsDolGuldurBrick>, <lotr:tile.stairsDolGuldurBrickCracked>, <lotr:tile.stairsMangrove>, <lotr:tile.stairsChestnut>, <lotr:tile.stairsBaobab>, <lotr:tile.stairsCedar>, <lotr:tile.stairsBlackGondorBrick>, <lotr:tile.stairsHighElvenBrick>, <lotr:tile.stairsHighElvenBrickMossy>, <lotr:tile.stairsHighElvenBrickCracked>, <lotr:tile.stairsWoodElvenBrick>, <lotr:tile.stairsWoodElvenBrickMossy>, <lotr:tile.stairsWoodElvenBrickCracked>, <lotr:tile.stairsDolAmrothBrick>, <lotr:tile.stairsFir>, <lotr:tile.stairsPinePine>, <lotr:tile.stairsMoredainBrick>, <lotr:tile.stairsNearHaradBrickCracked>, <lotr:tile.stairsRedSandstone>, <lotr:tile.stairsRotten>, <lotr:tile.stairsScorchedStone>, <lotr:tile.stairsLemon>, <lotr:tile.stairsOrange>, <lotr:tile.stairsLime>, <lotr:tile.stairsTauredainBrick>, <lotr:tile.stairsTauredainBrickMossy>, <lotr:tile.stairsTauredainBrickCracked>, <lotr:tile.stairsTauredainBrickGold>, <lotr:tile.stairsTauredainBrickObsidian>, <lotr:tile.stairsMahogany>, <lotr:tile.stairsNearHaradBrickRedCracked>, <lotr:tile.stairsNearHaradBrickRed>, <lotr:tile.stairsDwarvenBrickCracked>, <lotr:tile.stairsReed>], data=range(128), transparent=True, solid=True, nospawn=True)
 def lotr_stairs(self, blockid, data):
     # preserve the upside-down bit
     upside_down = data & 0x4
@@ -1039,6 +1045,16 @@ def lotr_stairs(self, blockid, data):
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick4_tauredainGold.png").copy()
     elif blockid == <lotr:tile.stairsTauredainBrickObsidian>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/brick4_tauredainObsidian.png").copy()
+    elif blockid == <lotr:tile.stairsMahogany>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/planks2_mahogany.png").copy()
+    elif blockid == <lotr:tile.stairsNearHaradBrickRed>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_nearHaradRed.png").copy()
+    elif blockid == <lotr:tile.stairsNearHaradBrickRedCracked>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/brick3_nearHaradRedCracked.png").copy()
+    elif blockid == <lotr:tile.stairsDwarvenBrickCracked>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/brick4_dwarvenCracked.png").copy()
+    elif blockid == <lotr:tile.stairsReed>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/thatch_reed.png").copy()
 
     outside_l = texture.copy()
     outside_r = texture.copy()
