@@ -14,7 +14,7 @@
 596	alloyForge
 597	stairsLime
 598	tauredainCraftingTable
-							      >	599	brick4
+599	brick4
 							      >	600	wallStone4
 							      >	601	slabSingle8
 							      >	602	slabDouble8
@@ -101,29 +101,29 @@
 							      >	683	slabClayTileDyedDouble
 							      >	684	slabClayTileDyedSingle2
 							      >	685	slabClayTileDyedDouble2
-							      >	686	stairsClayTile
-							      >	687	stairsClayTileDyedWhite
-							      >	688	stairsClayTileDyedOrange
-							      >	689	stairsClayTileDyedMagenta
-							      >	690	stairsClayTileDyedLightBlue
-							      >	691	stairsClayTileDyedYellow
-							      >	692	stairsClayTileDyedLime
-							      >	693	stairsClayTileDyedPink
-							      >	694	stairsClayTileDyedGray
-							      >	695	stairsClayTileDyedLightGray
-							      >	696	stairsClayTileDyedCyan
-							      >	697	stairsClayTileDyedPurple
-							      >	698	stairsClayTileDyedBlue
-							      >	699	stairsClayTileDyedBrown
-							      >	700	stairsClayTileDyedGreen
-							      >	701	stairsClayTileDyedRed
-							      >	702	stairsClayTileDyedBlack
+686	stairsClayTile
+687	stairsClayTileDyedWhite
+688	stairsClayTileDyedOrange
+689	stairsClayTileDyedMagenta
+690	stairsClayTileDyedLightBlue
+691	stairsClayTileDyedYellow
+692	stairsClayTileDyedLime
+693	stairsClayTileDyedPink
+694	stairsClayTileDyedGray
+695	stairsClayTileDyedLightGray
+696	stairsClayTileDyedCyan
+697	stairsClayTileDyedPurple
+698	stairsClayTileDyedBlue
+699	stairsClayTileDyedBrown
+700	stairsClayTileDyedGreen
+701	stairsClayTileDyedRed
+702	stairsClayTileDyedBlack
 703	wargFurBed
 							      >	704	slabUtumnoSingle
 							      >	705	slabUtumnoDouble
-							      >	706	stairsUtumnoBrickFire
-							      >	707	stairsUtumnoBrickIce
-							      >	708	stairsUtumnoBrickObsidian
+706	stairsUtumnoBrickFire
+707	stairsUtumnoBrickIce
+708	stairsUtumnoBrickObsidian
 							      >	709	wallUtumno
 							      >	710	kebabStand
 							      >	711	kebabStandSand

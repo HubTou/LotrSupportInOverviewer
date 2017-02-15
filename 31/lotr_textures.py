@@ -303,7 +303,7 @@ def brick2_values(self, blockid, data):
         t = self.load_image_texture("assets/lotr/textures/blocks/brick2_galadhrimCarved.png")
     return self.build_block(t, t)
 
-@material(blockid=<lotr:tile.brick3>, data=range(13), solid=True)
+@material(blockid=<lotr:tile.brick3>, data=range(16), solid=True)
 def brick3_values(self, blockid, data):
     # Carved Sarlluin Brick
     t = self.load_image_texture("assets/lotr/textures/blocks/brick3_blueCarved.png")
@@ -331,6 +331,48 @@ def brick3_values(self, blockid, data):
         t = self.load_image_texture("assets/lotr/textures/blocks/brick3_nearHaradCracked.png")
     elif data == 12:  # Glowing Dwarven Brick 
         t = self.load_image_texture("assets/lotr/textures/blocks/brick3_dwarvenGlowing.png")
+    elif data == 13:  # Red Near Harad Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick3_nearHaradRed.png")
+    elif data == 14:  # Cracked Red Near Harad Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick3_nearHaradRedCracked.png")
+    elif data == 15:  # Carved Red Near Harad Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick3_nearHaradRedCarved.png")
+    return self.build_block(t, t)
+
+@material(blockid=<lotr:tile.brick4>, data=range(16), solid=True)
+def brick4_values(self, blockid, data):
+    # Tauredain Brick
+    t = self.load_image_texture("assets/lotr/textures/blocks/brick4_tauredain.png")
+    if data == 1:  # Mossy Tauredain Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_tauredainMossy.png")
+    elif data == 2:  # Cracked Tauredain Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_tauredainCracked.png")
+    elif data == 3:  # Gold Tauredain Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_tauredainGold.png")
+    elif data == 4:  # Obsidian Tauredain Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_tauredainObsidian.png")
+    elif data == 5:  # Cracked Dwarven Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_dwarvenCracked.png")
+    elif data == 6:  # Carved Black Gondor Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_blackGondorCarved.png")
+    elif data == 7:  # Lapis-Trimmed Near Harad Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_nearHaradLapis.png")
+    elif data == 8:  # Silver High Elven Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_highElvenSilver.png")
+    elif data == 9:  # Silver Galadhrim Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_galadhrimSilver.png")
+    elif data == 10:  # Silver Wood-elven Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_woodElvenSilver.png")
+    elif data == 11:  # Gold High Elven Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_highElvenGold.png")
+    elif data == 12:  # Gold Galadhrim Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_galadhrimGold.png")
+    elif data == 13:  # Gold Wood-elven Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_woodElvenGold.png")
+    elif data == 14:  # Obsidian Dwarven Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_dwarvenObsidian.png")
+    elif data == 15:  # Chalk Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick4_chalk.png")
     return self.build_block(t, t)
 
 @material(blockid=<lotr:tile.utumnoBrick>, data=range(6), solid=True)
@@ -910,7 +952,7 @@ def lotr_double_flowers(self, blockid, data):
 # Weirdoes ######################################################################
 ################################################################################
 
-@material(blockid=[<lotr:tile.stairsPine>, <lotr:tile.stairsMordorBrick>, <lotr:tile.stairsGondorBrick>, <lotr:tile.stairsMallorn>, <lotr:tile.stairsGondorBrickMossy>, <lotr:tile.stairsGondorBrickCracked>, <lotr:tile.stairsRohanBrick>, <lotr:tile.stairsDwarvenBrick>, <lotr:tile.stairsApple>, <lotr:tile.stairsPear>, <lotr:tile.stairsCherry>, <lotr:tile.stairsMirkOak>, <lotr:tile.stairsCharred>, <lotr:tile.stairsLebethron>, <lotr:tile.stairsBeech>, <lotr:tile.stairsMordorBrickCracked>, <lotr:tile.stairsElvenBrick>, <lotr:tile.stairsElvenBrickMossy>, <lotr:tile.stairsElvenBrickCracked>, <lotr:tile.stairsHolly>, <lotr:tile.stairsBlueRockBrick>, <lotr:tile.stairsAngmarBrick>, <lotr:tile.stairsAngmarBrickCracked>, <lotr:tile.stairsMango>, <lotr:tile.stairsBanana>, <lotr:tile.stairsMaple>, <lotr:tile.stairsLarch>, <lotr:tile.stairsRedRockBrick>, <lotr:tile.stairsNearHaradBrick>, <lotr:tile.stairsDatePalm>, <lotr:tile.stairsThatch>, <lotr:tile.stairsArnorBrick>, <lotr:tile.stairsArnorBrickMossy>, <lotr:tile.stairsArnorBrickCracked>, <lotr:tile.stairsUrukBrick>, <lotr:tile.stairsDolGuldurBrick>, <lotr:tile.stairsDolGuldurBrickCracked>, <lotr:tile.stairsMangrove>, <lotr:tile.stairsChestnut>, <lotr:tile.stairsBaobab>, <lotr:tile.stairsCedar>, <lotr:tile.stairsBlackGondorBrick>, <lotr:tile.stairsHighElvenBrick>, <lotr:tile.stairsHighElvenBrickMossy>, <lotr:tile.stairsHighElvenBrickCracked>, <lotr:tile.stairsWoodElvenBrick>, <lotr:tile.stairsWoodElvenBrickMossy>, <lotr:tile.stairsWoodElvenBrickCracked>, <lotr:tile.stairsDolAmrothBrick>, <lotr:tile.stairsFir>, <lotr:tile.stairsPinePine>, <lotr:tile.stairsMoredainBrick>, <lotr:tile.stairsNearHaradBrickCracked>, <lotr:tile.stairsRedSandstone>, <lotr:tile.stairsRotten>, <lotr:tile.stairsScorchedStone>, <lotr:tile.stairsLemon>, <lotr:tile.stairsOrange>, <lotr:tile.stairsLime>, <lotr:tile.stairsTauredainBrick>, <lotr:tile.stairsTauredainBrickMossy>, <lotr:tile.stairsTauredainBrickCracked>, <lotr:tile.stairsTauredainBrickGold>, <lotr:tile.stairsTauredainBrickObsidian>, <lotr:tile.stairsMahogany>, <lotr:tile.stairsNearHaradBrickRedCracked>, <lotr:tile.stairsNearHaradBrickRed>, <lotr:tile.stairsDwarvenBrickCracked>, <lotr:tile.stairsReed>, <lotr:tile.stairsDwarvenBrickObsidian>, <lotr:tile.stairsWillow>, <lotr:tile.stairsChalkBrick>, <lotr:tile.stairsStoneBrickMossy>, <lotr:tile.stairsStoneBrickCracked>, <lotr:tile.stairsMordorRock>, <lotr:tile.stairsGondorRock>, <lotr:tile.stairsRohanRock>, <lotr:tile.stairsBlueRock>, <lotr:tile.stairsRedRock>, <lotr:tile.stairsStone>, <lotr:tile.stairsChalk>], data=range(128), transparent=True, solid=True, nospawn=True)
+@material(blockid=[<lotr:tile.stairsPine>, <lotr:tile.stairsMordorBrick>, <lotr:tile.stairsGondorBrick>, <lotr:tile.stairsMallorn>, <lotr:tile.stairsGondorBrickMossy>, <lotr:tile.stairsGondorBrickCracked>, <lotr:tile.stairsRohanBrick>, <lotr:tile.stairsDwarvenBrick>, <lotr:tile.stairsApple>, <lotr:tile.stairsPear>, <lotr:tile.stairsCherry>, <lotr:tile.stairsMirkOak>, <lotr:tile.stairsCharred>, <lotr:tile.stairsLebethron>, <lotr:tile.stairsBeech>, <lotr:tile.stairsMordorBrickCracked>, <lotr:tile.stairsElvenBrick>, <lotr:tile.stairsElvenBrickMossy>, <lotr:tile.stairsElvenBrickCracked>, <lotr:tile.stairsHolly>, <lotr:tile.stairsBlueRockBrick>, <lotr:tile.stairsAngmarBrick>, <lotr:tile.stairsAngmarBrickCracked>, <lotr:tile.stairsMango>, <lotr:tile.stairsBanana>, <lotr:tile.stairsMaple>, <lotr:tile.stairsLarch>, <lotr:tile.stairsRedRockBrick>, <lotr:tile.stairsNearHaradBrick>, <lotr:tile.stairsDatePalm>, <lotr:tile.stairsThatch>, <lotr:tile.stairsArnorBrick>, <lotr:tile.stairsArnorBrickMossy>, <lotr:tile.stairsArnorBrickCracked>, <lotr:tile.stairsUrukBrick>, <lotr:tile.stairsDolGuldurBrick>, <lotr:tile.stairsDolGuldurBrickCracked>, <lotr:tile.stairsMangrove>, <lotr:tile.stairsChestnut>, <lotr:tile.stairsBaobab>, <lotr:tile.stairsCedar>, <lotr:tile.stairsBlackGondorBrick>, <lotr:tile.stairsHighElvenBrick>, <lotr:tile.stairsHighElvenBrickMossy>, <lotr:tile.stairsHighElvenBrickCracked>, <lotr:tile.stairsWoodElvenBrick>, <lotr:tile.stairsWoodElvenBrickMossy>, <lotr:tile.stairsWoodElvenBrickCracked>, <lotr:tile.stairsDolAmrothBrick>, <lotr:tile.stairsFir>, <lotr:tile.stairsPinePine>, <lotr:tile.stairsMoredainBrick>, <lotr:tile.stairsNearHaradBrickCracked>, <lotr:tile.stairsRedSandstone>, <lotr:tile.stairsRotten>, <lotr:tile.stairsScorchedStone>, <lotr:tile.stairsLemon>, <lotr:tile.stairsOrange>, <lotr:tile.stairsLime>, <lotr:tile.stairsTauredainBrick>, <lotr:tile.stairsTauredainBrickMossy>, <lotr:tile.stairsTauredainBrickCracked>, <lotr:tile.stairsTauredainBrickGold>, <lotr:tile.stairsTauredainBrickObsidian>, <lotr:tile.stairsMahogany>, <lotr:tile.stairsNearHaradBrickRedCracked>, <lotr:tile.stairsNearHaradBrickRed>, <lotr:tile.stairsDwarvenBrickCracked>, <lotr:tile.stairsReed>, <lotr:tile.stairsDwarvenBrickObsidian>, <lotr:tile.stairsWillow>, <lotr:tile.stairsChalkBrick>, <lotr:tile.stairsStoneBrickMossy>, <lotr:tile.stairsStoneBrickCracked>, <lotr:tile.stairsMordorRock>, <lotr:tile.stairsGondorRock>, <lotr:tile.stairsRohanRock>, <lotr:tile.stairsBlueRock>, <lotr:tile.stairsRedRock>, <lotr:tile.stairsStone>, <lotr:tile.stairsChalk>, <lotr:tile.stairsClayTile>, <lotr:tile.stairsClayTileDyedWhite>, <lotr:tile.stairsClayTileDyedOrange>, <lotr:tile.stairsClayTileDyedMagenta>, <lotr:tile.stairsClayTileDyedLightBlue>, <lotr:tile.stairsClayTileDyedYellow>, <lotr:tile.stairsClayTileDyedLime>, <lotr:tile.stairsClayTileDyedPink>, <lotr:tile.stairsClayTileDyedGray>, <lotr:tile.stairsClayTileDyedBlue>, <lotr:tile.stairsClayTileDyedBrown>, <lotr:tile.stairsClayTileDyedPurple>, <lotr:tile.stairsClayTileDyedLightGray>, <lotr:tile.stairsClayTileDyedCyan>, <lotr:tile.stairsClayTileDyedGreen>, <lotr:tile.stairsClayTileDyedRed>, <lotr:tile.stairsClayTileDyedBlack>, <lotr:tile.stairsClayTileDyedBrown>, <lotr:tile.stairsUtumnoBrickFire>, <lotr:tile.stairsUtumnoBrickIce>, <lotr:tile.stairsUtumnoBrickObsidian>], data=range(128), transparent=True, solid=True, nospawn=True)
 def lotr_stairs(self, blockid, data):
     # preserve the upside-down bit
     upside_down = data & 0x4
@@ -1085,6 +1127,46 @@ def lotr_stairs(self, blockid, data):
         texture = self.load_image_texture("assets/minecraft/textures/blocks/stone.png").copy()
     elif blockid == <lotr:tile.stairsChalk>:
         texture = self.load_image_texture("assets/lotr/textures/blocks/rock_chalk.png").copy()
+    elif blockid == <lotr:tile.stairsClayTile>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTile.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedWhite>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_white.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedOrange>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_orange.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedMagenta>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_magenta.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedLightBlue>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_lightBlue.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedYellow>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_yellow.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedLime>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_lime.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedPink>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_pink.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedGray>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_gray.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedLightGray>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_lightGray.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedCyan>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_cyan.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedPurple>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_purple.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedBlue>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_blue.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedBrown>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_brown.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedGreen>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_green.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedRed>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_red.png").copy()
+    elif blockid == <lotr:tile.stairsClayTileDyedBlack>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/clayTileDyed_black.png").copy()
+    elif blockid == <lotr:tile.stairsUtumnoBrickFire>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_fire.png").copy()
+    elif blockid == <lotr:tile.stairsUtumnoBrickIce>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_ice.png").copy()
+    elif blockid == <lotr:tile.stairsUtumnoBrickObsidian>:
+        texture = self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_obsidian.png").copy()
 
     outside_l = texture.copy()
     outside_r = texture.copy()
