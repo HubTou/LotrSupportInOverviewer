@@ -83,17 +83,17 @@
 665	stairsStoneBrickCracked
 							      >	666	slabSingleV
 							      >	667	slabDoubleV
-							      >	668	stairsStone
-							      >	669	stairsMordorRock
-							      >	670	stairsGondorRock
-							      >	671	stairsRohanRock
-							      >	672	stairsBlueRock
-							      >	673	stairsRedRock
-							      >	674	stairsChalk
+668	stairsStone
+669	stairsMordorRock
+670	stairsGondorRock
+671	stairsRohanRock
+672	stairsBlueRock
+673	stairsRedRock
+674	stairsChalk
 							      >	675	gateHighElven
 							      >	676	gateWoodElven
 							      >	677	gateNearHarad
-							      >	678	clayTile
+678	clayTile
 							      >	679	clayTileDyed
 							      >	680	slabClayTileSingle
 							      >	681	slabClayTileDouble
