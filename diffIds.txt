@@ -47,40 +47,40 @@
 629	stairsReed
 630	tauredainDoubleTorch
 							      >	631	woodBeamV1
-							      >	632	reedBars
+632	reedBars
 							      >	633	woodBeamV2
 							      >	634	woodBeam1
 							      >	635	tauredainDartTrapGold
 							      >	636	weaponRack
 							      >	637	cornStalk
-							      >	638	wasteBlock
-							      >	639	stairsDwarvenBrickObsidian
-							      >	640	dirtPath
-							      >	641	stairsWillow
-							      >	642	willowVines
+638	wasteBlock
+639	stairsDwarvenBrickObsidian
+640	dirtPath
+641	stairsWillow
+642	willowVines
 							      >	643	woodBeam2
 							      >	644	woodBeamFruit
 							      >	645	woodBeam3
 							      >	646	woodBeam4
 							      >	647	woodBeam5
 							      >	648	woodBeam6
-							      >	649	woodBeamRotten
+649	woodBeamRotten
 							      >	650	gateWooden
 							      >	651	gateIronBars
 							      >	652	gateBronzeBars
 							      >	653	gateWoodenCross
 							      >	654	gateOrc
-							      >	655	stairsChalkBrick
+655	stairsChalkBrick
 							      >	656	slabSingle9
 							      >	657	slabDouble9
 							      >	658	gateElven
 							      >	659	gateDwarven
 							      >	660	gateGondor
-							      >	661	pressurePlateChalk
-							      >	662	buttonChalk
+661	pressurePlateChalk
+662	buttonChalk
 							      >	663	wallStoneV
-							      >	664	stairsStoneBrickMossy
-							      >	665	stairsStoneBrickCracked
+664	stairsStoneBrickMossy
+665	stairsStoneBrickCracked
 							      >	666	slabSingleV
 							      >	667	slabDoubleV
 							      >	668	stairsStone
