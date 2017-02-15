@@ -375,6 +375,52 @@ def brick4_values(self, blockid, data):
         t = self.load_image_texture("assets/lotr/textures/blocks/brick4_chalk.png")
     return self.build_block(t, t)
 
+@material(blockid=<lotr:tile.brick5>, data=range(16), solid=True)
+def brick4_values(self, blockid, data):
+    # Mud Brick
+    t = self.load_image_texture("assets/lotr/textures/blocks/brick5_mud.png")
+    if data == 1:  # Dalish Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_dale.png")
+    elif data == 2:  # Dorwinion Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_dorwinion.png")
+    elif data == 3:  # Carved Rohan Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_rohanCarved.png")
+    elif data == 4:  # Mossy Dorwinion Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_dorwinionMossy.png")
+    elif data == 5:  # Cracked Dorwinion Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_dorwinionCracked.png")
+    elif data == 6:  # Carved Dorwinion Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_dorwinionCarved.png")
+    elif data == 7:  # Flowery Dorwinion Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_dorwinionFlowers.png")
+    elif data == 8:  # Gondor Cobblebrick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_gondorRustic.png")
+    elif data == 9:  # Mossy Gondor Cobblebrick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_gondorRusticMossy.png")
+    elif data == 10:  # Cracked Gondor Cobblebrick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_gondorRusticCracked.png")
+    elif data == 11:  # Rhun Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_rhun.png")
+    elif data == 12:  # Carved Rhun Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_rhunCarved.png")
+    elif data == 13:  # Mossy Rhun Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_rhunMossy.png")
+    elif data == 14:  # Cracked Rhun Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_rhunCracked.png")
+    elif data == 15:  # Flowery Rhun Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick5_rhunFlowers.png")
+    return self.build_block(t, t)
+
+@material(blockid=<lotr:tile.brick6>, data=range(3), solid=True)
+def brick4_values(self, blockid, data):
+    # Gold Rhun Brick
+    t = self.load_image_texture("assets/lotr/textures/blocks/brick6_rhunGold.png")
+    if data == 1:  # Red Rhun Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick6_rhunRed.png")
+    elif data == 2:  # Carved Red Rhun Brick
+        t = self.load_image_texture("assets/lotr/textures/blocks/brick6_rhunRedCarved.png")
+    return self.build_block(t, t)
+
 @material(blockid=<lotr:tile.utumnoBrick>, data=range(6), solid=True)
 def utumnoBrick_values(self, blockid, data):
     t =  self.load_image_texture("assets/lotr/textures/blocks/utumnoBrick_fire.png")

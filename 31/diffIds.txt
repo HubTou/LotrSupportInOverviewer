@@ -133,7 +133,7 @@
 							      >	715	gateSilver
 							      >	716	gateGold
 							      >	717	gateMithril
-							      >	718	brick5
+718	brick5
 							      >	719	stairsMudBrick
 							      >	720	leek
 							      >	721	turnip
@@ -235,7 +235,7 @@
 							      >	817	stairsRhunBrickMossy
 							      >	818	stairsRhunBrickCracked
 							      >	819	stairsRhunBrickFlowers
-							      >	820	brick6
+820	brick6
 							      >	821	rhunCraftingTable
 							      >	822	stairsRhunBrickRed
 							      >	823	stairsRedwood
