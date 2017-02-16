@@ -25,7 +25,7 @@
 607	stairsTauredainBrickObsidian
 608	obsidianGravel
 							      >	609	tauredainDartTrap
-							      >	610	wood6
+610	wood6
 							      >	611	leaves6
 							      >	612	sapling6
 							      >	613	woodSlabSingle4
@@ -41,14 +41,14 @@
 623	redSandstone
 624	stairsRedSandstone
 625	stairsDwarvenBrickCracked
-							      >	626	pillar2
+626	pillar2
 627	hithlainLadder
 							      >	628	reeds
 629	stairsReed
 630	tauredainDoubleTorch
-							      >	631	woodBeamV1
+631	woodBeamV1
 632	reedBars
-							      >	633	woodBeamV2
+633	woodBeamV2
 							      >	634	woodBeam1
 							      >	635	tauredainDartTrapGold
 							      >	636	weaponRack
@@ -58,12 +58,12 @@
 640	dirtPath
 641	stairsWillow
 642	willowVines
-							      >	643	woodBeam2
-							      >	644	woodBeamFruit
-							      >	645	woodBeam3
-							      >	646	woodBeam4
-							      >	647	woodBeam5
-							      >	648	woodBeam6
+643	woodBeam2
+644	woodBeamFruit
+645	woodBeam3
+646	woodBeam4
+647	woodBeam5
+648	woodBeam6
 649	woodBeamRotten
 							      >	650	gateWooden
 							      >	651	gateIronBars
@@ -160,10 +160,10 @@
 							      >	742	stairsDorwinionBrickMossy
 							      >	743	stairsDorwinionBrickCracked
 							      >	744	stairsDorwinionBrickFlowers
-							      >	745	wood7
+745	wood7
 							      >	746	leaves7
 							      >	747	sapling7
-							      >	748	woodBeam7
+748	woodBeam7
 							      >	749	stairsAspen
 							      >	750	mirkVines
 							      >	751	stairsGreenOak
@@ -177,14 +177,14 @@
 							      >	759	slabDoubleGravel
 							      >	760	morgulFlower
 							      >	761	blackroot
-							      >	762	wood8
+762	wood8
 							      >	763	leaves8
 							      >	764	sapling8
 							      >	765	planks3
 							      >	766	fence3
 							      >	767	woodSlabSingle5
 							      >	768	woodSlabDouble5
-							      >	769	woodBeam8
+769	woodBeam8
 							      >	770	stairsPlum
 							      >	771	fallenLeavesLOTR3
 							      >	772	stairsGondorBrickRustic
