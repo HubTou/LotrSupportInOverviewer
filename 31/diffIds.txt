@@ -49,7 +49,7 @@
 631	woodBeamV1
 632	reedBars
 633	woodBeamV2
-							      >	634	woodBeam1
+634	woodBeam1
 							      >	635	tauredainDartTrapGold
 							      >	636	weaponRack
 							      >	637	cornStalk
@@ -94,7 +94,7 @@
 							      >	676	gateWoodElven
 							      >	677	gateNearHarad
 678	clayTile
-							      >	679	clayTileDyed
+679	clayTileDyed
 							      >	680	slabClayTileSingle
 							      >	681	slabClayTileDouble
 							      >	682	slabClayTileDyedSingle
@@ -134,15 +134,15 @@
 							      >	716	gateGold
 							      >	717	gateMithril
 718	brick5
-							      >	719	stairsMudBrick
+719	stairsMudBrick
 							      >	720	leek
 							      >	721	turnip
-							      >	722	stairsDaleBrick
-							      >	723	stairsDorwinionBrick
+722	stairsDaleBrick
+723	stairsDorwinionBrick
 							      >	724	daleCraftingTable
 							      >	725	dorwinionCraftingTable
-							      >	726	stairsCypress
-							      >	727	stairsOlive
+726	stairsCypress
+727	stairsOlive
 							      >	728	slabSingle10
 							      >	729	slabDouble10
 							      >	730	hobbitCraftingTable
@@ -245,4 +245,4 @@
 							      >	827	gateRhun
 							      >	828	yam
 							      >	829	kebabBlock
-							      >	830	stairsPomegranate 
+							      >	830	stairsPomegranate
