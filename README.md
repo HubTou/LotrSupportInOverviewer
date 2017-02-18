@@ -28,14 +28,14 @@ After that, copy the overviewer_textures-1.7.10-with-lotr.jar at the place you p
 For example, here's a simplified Overviewer configuration file doing that:
 
  	texturepath = "overviewer_textures-1.7.10-with-lotr.jar"
-	
+
  	worlds["world"] = "world/DIM100"
-	
+
  	renders["normalrender"] = {
  	    "world": "world",
  	    "title": "world map",
  	}
-	
+
  	outputdir = "public_html/map"
 
 
@@ -68,7 +68,7 @@ Blocks without textures are missing (beacons, stalactite, flower pots, elven & m
 Versions and changelog
 ======================
 
-        1.11    2017-02-13      Got things started for LOTR B31
+   1.11  2017-02-13  Got things started for LOTR B31
 	1.10	2016-11-28	Started support for LOTR Mod B30.3
 	1.09	2015-10-31	Added support for LOTR Utumno bricks (used for The Pits)
 	1.08	2015-10-24	Added support for LOTR mallornLadder, torches, orcTorches, beds, buttons, pressure plates,
