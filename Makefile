@@ -2,7 +2,7 @@
 
 VERSION=1.10
 PY_VERSION=11
-LOTR_VERSION=30.3
+LOTR_VERSION=31
 
 OVERVIEWER_TEXTURES_PY=/usr/local/lib/python2.7/site-packages/overviewer_core/textures.py
 

@@ -1,0 +1,248 @@
+583	planksRotten
+584	stairsRotten
+585	rottenSlabSingle
+586	rottenSlabDouble
+587	fenceRotten
+588	scorchedStone
+589	scorchedSlabSingle
+590	scorchedSlabDouble
+591	stairsScorchedStone
+592	scorchedWall
+593	stairsLemon
+							      >	594	lemonCake
+595	stairsOrange
+596	alloyForge
+597	stairsLime
+598	tauredainCraftingTable
+599	brick4
+							      >	600	wallStone4
+							      >	601	slabSingle8
+							      >	602	slabDouble8
+603	stairsTauredainBrick
+604	stairsTauredainBrickMossy
+605	stairsTauredainBrickCracked
+606	stairsTauredainBrickGold
+607	stairsTauredainBrickObsidian
+608	obsidianGravel
+							      >	609	tauredainDartTrap
+610	wood6
+							      >	611	leaves6
+							      >	612	sapling6
+							      >	613	woodSlabSingle4
+							      >	614	woodSlabDouble4
+615	stairsMahogany
+616	mud
+617	mudGrass
+							      >	618	chestStone
+							      >	619	spawnerChestStone
+620	mudFarmland
+621	stairsNearHaradBrickRed
+622	stairsNearHaradBrickRedCracked
+623	redSandstone
+624	stairsRedSandstone
+625	stairsDwarvenBrickCracked
+626	pillar2
+627	hithlainLadder
+							      >	628	reeds
+629	stairsReed
+630	tauredainDoubleTorch
+631	woodBeamV1
+632	reedBars
+633	woodBeamV2
+634	woodBeam1
+							      >	635	tauredainDartTrapGold
+							      >	636	weaponRack
+							      >	637	cornStalk
+638	wasteBlock
+639	stairsDwarvenBrickObsidian
+640	dirtPath
+641	stairsWillow
+642	willowVines
+643	woodBeam2
+644	woodBeamFruit
+645	woodBeam3
+646	woodBeam4
+647	woodBeam5
+648	woodBeam6
+649	woodBeamRotten
+							      >	650	gateWooden
+							      >	651	gateIronBars
+							      >	652	gateBronzeBars
+							      >	653	gateWoodenCross
+							      >	654	gateOrc
+655	stairsChalkBrick
+							      >	656	slabSingle9
+							      >	657	slabDouble9
+							      >	658	gateElven
+							      >	659	gateDwarven
+							      >	660	gateGondor
+661	pressurePlateChalk
+662	buttonChalk
+							      >	663	wallStoneV
+664	stairsStoneBrickMossy
+665	stairsStoneBrickCracked
+							      >	666	slabSingleV
+							      >	667	slabDoubleV
+668	stairsStone
+669	stairsMordorRock
+670	stairsGondorRock
+671	stairsRohanRock
+672	stairsBlueRock
+673	stairsRedRock
+674	stairsChalk
+							      >	675	gateHighElven
+							      >	676	gateWoodElven
+							      >	677	gateNearHarad
+678	clayTile
+679	clayTileDyed
+							      >	680	slabClayTileSingle
+							      >	681	slabClayTileDouble
+							      >	682	slabClayTileDyedSingle
+							      >	683	slabClayTileDyedDouble
+							      >	684	slabClayTileDyedSingle2
+							      >	685	slabClayTileDyedDouble2
+686	stairsClayTile
+687	stairsClayTileDyedWhite
+688	stairsClayTileDyedOrange
+689	stairsClayTileDyedMagenta
+690	stairsClayTileDyedLightBlue
+691	stairsClayTileDyedYellow
+692	stairsClayTileDyedLime
+693	stairsClayTileDyedPink
+694	stairsClayTileDyedGray
+695	stairsClayTileDyedLightGray
+696	stairsClayTileDyedCyan
+697	stairsClayTileDyedPurple
+698	stairsClayTileDyedBlue
+699	stairsClayTileDyedBrown
+700	stairsClayTileDyedGreen
+701	stairsClayTileDyedRed
+702	stairsClayTileDyedBlack
+703	wargFurBed
+							      >	704	slabUtumnoSingle
+							      >	705	slabUtumnoDouble
+706	stairsUtumnoBrickFire
+707	stairsUtumnoBrickIce
+708	stairsUtumnoBrickObsidian
+							      >	709	wallUtumno
+							      >	710	kebabStand
+							      >	711	kebabStandSand
+							      >	712	gateTauredain
+							      >	713	gateDolAmroth
+							      >	714	gateUruk
+							      >	715	gateSilver
+							      >	716	gateGold
+							      >	717	gateMithril
+718	brick5
+719	stairsMudBrick
+							      >	720	leek
+							      >	721	turnip
+722	stairsDaleBrick
+723	stairsDorwinionBrick
+							      >	724	daleCraftingTable
+							      >	725	dorwinionCraftingTable
+726	stairsCypress
+727	stairsOlive
+							      >	728	slabSingle10
+							      >	729	slabDouble10
+							      >	730	hobbitCraftingTable
+							      >	731	gateHobbitGreen
+							      >	732	gateHobbitBlue
+							      >	733	gateHobbitRed
+							      >	734	gateHobbitYellow
+							      >	735	driedReeds
+							      >	736	redBrick
+							      >	737	stairsBrickMossy
+							      >	738	stairsBrickCracked
+							      >	739	grapevine
+							      >	740	grapevineRed
+							      >	741	grapevineWhite
+							      >	742	stairsDorwinionBrickMossy
+							      >	743	stairsDorwinionBrickCracked
+							      >	744	stairsDorwinionBrickFlowers
+745	wood7
+							      >	746	leaves7
+							      >	747	sapling7
+748	woodBeam7
+							      >	749	stairsAspen
+							      >	750	mirkVines
+							      >	751	stairsGreenOak
+							      >	752	stairsLairelosse
+							      >	753	stairsAlmond
+							      >	754	slabSingleDirt
+							      >	755	slabDoubleDirt
+							      >	756	slabSingleSand
+							      >	757	slabDoubleSand
+							      >	758	slabSingleGravel
+							      >	759	slabDoubleGravel
+							      >	760	morgulFlower
+							      >	761	blackroot
+762	wood8
+							      >	763	leaves8
+							      >	764	sapling8
+							      >	765	planks3
+							      >	766	fence3
+							      >	767	woodSlabSingle5
+							      >	768	woodSlabDouble5
+769	woodBeam8
+							      >	770	stairsPlum
+							      >	771	fallenLeavesLOTR3
+							      >	772	stairsGondorBrickRustic
+							      >	773	stairsGondorBrickRusticMossy
+							      >	774	stairsGondorBrickRusticCracked
+							      >	775	slabSingle11
+							      >	776	slabDouble11
+							      >	777	whiteSand
+							      >	778	whiteSandstone
+							      >	779	stairsWhiteSandstone
+							      >	780	treasureCopper
+							      >	781	treasureSilver
+							      >	782	treasureGold
+							      >	783	chestLebethron
+							      >	784	chestBasket
+							      >	785	marigold
+							      >	786	rhunFlower
+							      >	787	chestMallorn
+							      >	788	stairsCobblestoneMossy
+							      >	789	marzipanBlock
+							      >	790	mallornTorchBlue
+							      >	791	mallornTorchGold
+							      >	792	mallornTorchGreen
+							      >	793	wallClayTile
+							      >	794	wallClayTileDyed
+							      >	795	ceramicMug
+							      >	796	gobletGold
+							      >	797	gobletSilver
+							      >	798	gobletCopper
+							      >	799	gobletWood
+							      >	800	skullCup
+							      >	801	wineGlass
+							      >	802	glassBottle
+							      >	803	aleHorn
+							      >	804	aleHornGold
+							      >	805	woodBeamS
+							      >	806	birdCage
+							      >	807	birdCageWood
+							      >	808	gateRohan
+							      >	809	signCarved
+							      >	810	signCarvedIthildin
+							      >	811	dwarvenDoorIthildin
+							      >	812	smoothStoneV
+							      >	813	smoothStone
+							      >	814	slabSingle12
+							      >	815	slabDouble12
+							      >	816	stairsRhunBrick
+							      >	817	stairsRhunBrickMossy
+							      >	818	stairsRhunBrickCracked
+							      >	819	stairsRhunBrickFlowers
+820	brick6
+							      >	821	rhunCraftingTable
+							      >	822	stairsRhunBrickRed
+							      >	823	stairsRedwood
+							      >	824	rhunFire
+							      >	825	rhunFireJar
+							      >	826	daub
+							      >	827	gateRhun
+							      >	828	yam
+							      >	829	kebabBlock
+							      >	830	stairsPomegranate

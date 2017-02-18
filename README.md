@@ -5,35 +5,37 @@ A tool that can generate a new Minecraft Overviewer textures jar including the L
 
 Installation
 ============
-Verify you have installed Overviewer and that it's location is the one indicated in the OVERVIEWER_TEXTURES_PY Makefile's variable.
+Verify you have installed Overviewer(Either via a package manager, or built from source) and that the location of textures.py for your installation is the one indicated in the OVERVIEWER_TEXTURES_PY Makefile variable (edit the makefile with a text editor to make sure this is the case. Change it if it isn't). The reccomended commit from the overviewer is [link](https://github.com/overviewer/Minecraft-Overviewer/commits/master?after=Y3Vyc29yOirdlhMs9u7Usxw05y%2FK18E%2Flv%2FWKzEzOQ%3D%3D "c6830a3"), which can be downloaded directly from [link](https://github.com/overviewer/Minecraft-Overviewer/archive/50b8da58207af5e65a8dc00cb5cf56f9aeab8ab9.zip "here").
 
 You'll also need :
 
-- the zip/unzip package
+- a zip/unzip package (tar, jar, and/or zip)
 
-- my ShowLocalMinecraftIds.sh utility (see http://minecraft.tournier.org/)
+- my ShowLocalMinecraftIds.sh utility (it is included in this repository, but it you don't have it for whatever reason, see http://minecraft.tournier.org/)
 
 
 Usage
 =====
-Type "make", in order to fetch and build the necessary files.
-You'll have to provide the path to a specific Lord of the Rings Mod instance when requested.
+Navigate to the directory you downloaded this repository into and run "make", in order to fetch and build the necessary files.
+You'll have to provide the path to a specific Lord of the Rings Mod world (more specifically, the level.dat file) when requested.
 
-If everything goes well, type "make install", which will modify or upgrade your existing Overviewer installation.
+If make finishes without errors, type "make install", which will modify or upgrade your existing Overviewer installation.
 Just to be on the safe side, a backup copy of your original Overviewer files will be done.
+
+If you need to remove the stuff you made and re-make the files, run ```make clean``` or ```make distclean```.
 
 After that, copy the overviewer_textures-1.7.10-with-lotr.jar at the place you put the standard Overviewer textures file and reference the new one in your existing configuration.
 For example, here's a simplified Overviewer configuration file doing that:
 
  	texturepath = "overviewer_textures-1.7.10-with-lotr.jar"
-	
+
  	worlds["world"] = "world/DIM100"
-	
+
  	renders["normalrender"] = {
  	    "world": "world",
  	    "title": "world map",
  	}
-	
+
  	outputdir = "public_html/map"
 
 
@@ -66,6 +68,7 @@ Blocks without textures are missing (beacons, stalactite, flower pots, elven & m
 Versions and changelog
 ======================
 
+   1.11  2017-02-13  Got things started for LOTR B31
 	1.10	2016-11-28	Started support for LOTR Mod B30.3
 	1.09	2015-10-31	Added support for LOTR Utumno bricks (used for The Pits)
 	1.08	2015-10-24	Added support for LOTR mallornLadder, torches, orcTorches, beds, buttons, pressure plates,
@@ -106,5 +109,7 @@ Cf. http://lotrminecraftmod.wikia.com/wiki/The_Lord_of_the_Rings_Minecraft_Mod_W
 Author
 ======
 Hubert Tournier
+
+Updates and help with docs by MuggMuggins, also known as SamwiseFilmore
 
 November, 28 2016
