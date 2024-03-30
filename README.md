@@ -1,3 +1,5 @@
+:warning: Due to [Microsoft inept policy concerning Minecraft accounts](https://help.minecraft.net/hc/en-us/articles/19615552270221) I no longer have access to the game and thus won't maintain this software anymore
+
 About LotrSupportInOverviewer
 =============================
 A tool that can generate a new Minecraft Overviewer textures jar including the Lord of the Rings Mod's textures, and modify installed Overviewer software taking into account local block IDs, so that the Minecraft Overviewer can support LOTR's new blocks rendering (up to beta 24.4, so far, with an ongoing effort to support beta 30.3).
